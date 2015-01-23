@@ -8,7 +8,7 @@
 
 nav ul a,
 nav .brand-logo {
-  color: #444;
+  color: #000000;
 }
 
 p {
@@ -16,13 +16,13 @@ p {
 }
 
 .button-collapse {
-  color: #26a69a;
+  color: #000000;
 }
 
 .parallax-container {
   min-height: 380px;
   line-height: 0;
-  height: auto;
+  height: 300px;
   color: rgba(255,255,255,.9);
 }
   .parallax-container .section {
