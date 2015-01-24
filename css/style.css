@@ -6,44 +6,39 @@
  * Made By MaterializeCSS.com
  */
 
-nav ul a,
-nav .brand-logo {
-  color: #000000;
-}
-
-p {
-  line-height: 2rem;
-}
-
-.button-collapse {
-  color: #000000;
-}
-
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: 300px;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-
-.icon-block {
-  padding: 0 15px;
-}
-
-footer.page-footer {
+body {
   margin: 0;
+  padding: 0;
+  background: #EEEEEE;
+}
+
+@media only screen and (min-width: 1000px) {
+	.brand-logo {
+		margin-left: 10px !important;
+	}
+}
+@media only screen and (min-width: 600px) {
+	.card-image .card-title {
+		font-size: 40px;
+  	}
+}
+@media only screen and (min-width: 400px) {
+	.card-image .card-title {
+		font-size: 30px;
+  	}
+}
+
+nav ul a, nav .brand-logo, .card-title {
+  color: #000000 !important;
+}
+#content {
+  padding: 20px;
+}
+
+.card-image {
+  max-height: 300px;
+}
+
+.card-image .card-title {
+	color: #FFFFFF !important;
 }

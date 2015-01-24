@@ -1,106 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>Parallax Template - Materialize</title>
-
-  <!-- CSS  -->
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<title>Tomorrow</title>
+	<script src="jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="white" role="navigation">
-    <div class="container">
-      <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">tomorrow</a>
-        <ul id="nav-mobile" class="right side-nav">
-          <li><a href="tomorrow.html">List</a></li>
-          <li><a href="settings.html">Settings</a></li>
-          <li><a href="about.html">About</a></li>
 
-        </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-      </div>
-    </div>
-  </nav>
-
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center white-text text-lighten-2">Welcome to Tomorrow</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">The app that will help you stop worrying and enjoy life</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="images/background1.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row"> </div>
-
-        <div class="col s12 m4"> </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-<h5 class="center">Let us get to know you</h5>
-<p class="light center">Tell us your first name so we can personalize your experience</p>
-
-<div class="row">
-  <form class="col s12">
-    <div class="row">
-      <div class="input-field col s6">
-        <i class="mdi-editor-mode-edit prefix"></i>
-        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-
-        <label for="icon_prefix2">First Name</label>
-      </div>
-    </div>
-  </form>
+<div class="navbar-fixed">
+	<nav class="navbar white">
+		<div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">tomorrow</a>
+			<ul id="nav-mobile" class="right side-nav">
+			<li><a href="tomorrow.html">List</a></li>
+			<li><a href="settings.html">Settings</a></li>
+			<li><a href="about.html">About</a></li>
+		</div>
+	</nav>
 </div>
-<div class="row">
-  <form class="col s12">
-    <div class="row">
-      <div class="input-field col s6">
-        <i class="mdi-maps-place prefix"></i>
-        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
 
-        <label for="icon_prefix2">Zip Code</label>
-      </div>
-    </div>
-  </form>
+<div id="content">
+
+	<div class="card">
+		<div class="card-image">
+			<img src="images/background1.jpg">
+			<span class="card-title">Welcome to Tomorrow</span>
+		</div>
+		<div class="card-content">
+			<p>Tomorrow will help you stop worrying and enjoy life.</p>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-content">
+			<span class="card-title">Let us get to know you</span>
+			<p>Give Tomorrow some basic info so we can personalize your experience.</p>
+			<div class="row">
+				<div class="input-field col s6">
+					<input id="first_name" type="text" class="validate">
+					<label for="first_name">First Name</label>
+				</div>
+				<div class="input-field col s6">
+					<input id="last_name" type="text" class="validate">
+					<label for="last_name">Last Name</label>
+				</div>
+				<div class="input-field col s12">
+					<i class="mdi-maps-place prefix"></i>
+					<input id="zip" type="text" class="validate">
+					<label for="zip">ZIP Code</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<a href="tomorrow.html" id="download-button" class="btn-large waves-effect waves-light black lighten-1 col s12">Get Started</a>
+		<p class="light center col s12">You can change these features at any time through the settings page.</p>
+	</div>
+
 </div>
-<p class="light center">Tomorrow has a built in alarm feature. We implemented this, as if we are the app to wake you up, we can then immediately show you your list. Would you like us to enable it?</p>
-<form action="#">
-  <p>
-    <input class = "with-gap" name="group1" type="radio" id="test1" />
-    <label for="test1">Yes</label>
-  </p>
-  <p>
-    <input class = "with-gap" name="group1" type="radio" id="test2" />
-    <label for="test2">No</label>
-  </p>
-</form>
-          </div>
-          
-          <div class="row center">
-          <a href="tomorrow.html" id="download-button" class="btn-large waves-effect waves-light black lighten-1">Get Started</a>
-        </div>
-        <p class="light center">You can change these features at any time through the settings page.</p>
-        </div>
-    </div>
 
-    </div>
-  </div>
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-
-  </body>
+</body>
 </html>
