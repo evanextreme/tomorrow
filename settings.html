@@ -26,43 +26,25 @@
     <div class="container">
       <h5 class="center">Settings</h5>
 
-<div class="row">
-  <form class="col s12">
-    <div class="row">
-      <div class="input-field col s6">
-        <i class="mdi-editor-mode-edit prefix"></i>
-        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-
-        <label for="icon_prefix2">First Name</label>
+      <div class="card">
+        <div class="card-content">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="zip" type="text" class="validate">
+              <label for="zip">ZIP Code</label>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </form>
-</div>
-<div class="row">
-  <form class="col s12">
-    <div class="row">
-      <div class="input-field col s6">
-        <i class="mdi-maps-place prefix"></i>
-        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
 
-        <label for="icon_prefix2">Zip Code</label>
-      </div>
-    </div>
-  </form>
-</div>
-        
-<p class="light center">Alarm Preference</p>
-<form action="#">
-  <p>
-    <input class = "with-gap" name="group1" type="radio" id="test1" />
-    <label for="test1">Yes</label>
-  </p>
-  <p>
-    <input class = "with-gap" name="group1" type="radio" id="test2" />
-    <label for="test2">No</label>
-  </p>
-</form>
-        
       </div>
       <div class="row center">
   <a class="btn-large waves-effect waves-light black" onclick="toast('Settings saved!', 4000, 'rounded')">Save</a>
