@@ -47,6 +47,8 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 
 #content {
 	padding: 20px;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 .card-image {
@@ -54,5 +56,20 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 }
 
 .card-image .card-title {
+	color: #FFFFFF !important;
+}
+
+/* Styles for Setup */
+
+.setup {
+	background: url(../img/bg.jpg) no-repeat center fixed;
+}
+
+.setup nav {
+    background: rgb(0, 0, 0) transparent;
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+}
+.setup ul a {
 	color: #FFFFFF !important;
 }
