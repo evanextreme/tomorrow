@@ -29,7 +29,7 @@ $(document).ready(function(){
 	$('#getstarted').click(function() {
 		if( (document.getElementById("first_name").value == 0) || (document.getElementById("last_name").value == 0) || (document.getElementById("zip").value == 0) )
 		{
-		   toast('Fill out everything and try again!', 10000000, 'rounded');
+		   toast('Fill out everything and try again!', 5000, 'rounded');
 		} else {
 			localStorage['firstname'] = document.getElementById("first_name").value;
 			localStorage['lastname'] = document.getElementById("last_name").value;
