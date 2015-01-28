@@ -65,15 +65,16 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 
 /* Styles for Setup */
 
-.setup {
+#setup {
 	background: url(../img/bg.jpg) no-repeat center fixed;
+	visibility: hidden;
 }
 
-.setup nav {
+#setup nav {
     background: rgb(0, 0, 0) transparent;
     background: rgba(0, 0, 0, 0.6);
     color: #FFFFFF;
 }
-.setup ul a {
+#setup ul a {
 	color: #FFFFFF !important;
 }
