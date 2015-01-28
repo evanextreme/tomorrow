@@ -7,9 +7,9 @@
  */
 
 body {
-  margin: 0;
-  padding: 0;
-  background: #EEEEEE;
+	margin: 0;
+	padding: 0;
+	background: #EEEEEE;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -46,7 +46,7 @@ body {
 }
 
 nav ul a, nav .brand-logo, .card-title, .button-colapse {
-  color: #000000 !important;
+	color: #000000 !important;
 }
 
 #content {
@@ -56,7 +56,7 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 }
 
 .card-image {
-  max-height: 300px;
+	max-height: 300px;
 }
 
 .card-image .card-title {
@@ -66,8 +66,14 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 /* Styles for Setup */
 
 #setup {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	right: 0px;
 	background: url(../img/bg.jpg) no-repeat center fixed;
-	visibility: hidden;
+	z-index: 1;
 }
 
 #setup nav {
@@ -75,6 +81,9 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
     background: rgba(0, 0, 0, 0.6);
     color: #FFFFFF;
 }
-#setup ul a {
-	color: #FFFFFF !important;
+
+#setup > div {
+	padding: 20px;
+	max-width: 800px;
+	margin: 0 auto;
 }
