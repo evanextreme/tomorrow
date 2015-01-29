@@ -8,11 +8,6 @@ $(document).ready(function(){
 
 		$('#setup').show();
 
-		// Sets contents of text fields on setup screen to localStorage
-		document.getElementById("first_name").value = localStorage['firstname'];
-		document.getElementById("last_name").value = localStorage['lastname'];
-		document.getElementById("zip").value = localStorage['zip'];
-
 		$('#getstarted').click(function() {
 			  // Test if any of the text fields are empty
 			if( (document.getElementById("first_name").value == 0) || (document.getElementById("last_name").value == 0) || (document.getElementById("zip").value == 0) )
@@ -28,5 +23,6 @@ $(document).ready(function(){
 				location.reload();
 			}
 		});
+
 	}
 });
