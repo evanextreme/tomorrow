@@ -31,7 +31,7 @@ $(document).ready(function(){
     woeid: '',
     unit: 'f',
     success: function(weather) {
-      html = "<p>It's currently " + weather.temp + "&deg;" + weather.units.temp + " and " + weather.currently +  ".</p>";
+      html = "<div class='card'><div class='card-content'><img src='" + weather.thumbnail + "' style='float:left; height: 45px; width: auto;' /><p>It's currently " + weather.temp + "&deg;" + weather.units.temp + " and " + weather.currently +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></div></div>";
 
       $("#weather").html(html);
     },
