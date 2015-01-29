@@ -72,8 +72,10 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 	right: 0px;
 	bottom: 0px;
 	right: 0px;
-	background: url(../img/bg.jpg) no-repeat center fixed;
+	background: #000000 url(../img/bg.jpg) no-repeat center fixed;
+	background-size: cover;
 	z-index: 1;
+	display: none;
 }
 
 #setup nav {
