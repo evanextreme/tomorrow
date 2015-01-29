@@ -54,6 +54,16 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 	color: #000000 !important;
 }
 
+#main {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	right: 0px;
+	z-index: 0;
+}
+
 #content {
 	padding: 20px;
 	max-width: 800px;
@@ -66,16 +76,6 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 
 .card-image .card-title {
 	color: #FFFFFF !important;
-}
-
-#main {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	right: 0px;
-	z-index: 0;
 }
 
 /* Styles for Setup */
