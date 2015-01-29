@@ -1,12 +1,10 @@
 $(document).ready(function(){
 
-	$('#setup').hide();
-
 	// Code for setup process
 
 	if (localStorage.getItem("setup") === null) {
 
-		$('#setup').show();
+		$("#setup").css("display","block", "!important");
 
 		$('#getstarted').click(function() {
 			  // Test if any of the text fields are empty
