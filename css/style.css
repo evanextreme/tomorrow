@@ -78,6 +78,12 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 	color: #FFFFFF !important;
 }
 
+table, tr, th {
+  font-weight: normal !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
 /* Styles for Setup */
 
 #setup {
