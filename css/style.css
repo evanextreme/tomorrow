@@ -41,6 +41,11 @@ body {
 	}
 }
 
+nav {
+  position: fixed;
+  z-index: 1;
+}
+
 #toast-container {
 	padding: 10px;
 }
@@ -52,7 +57,7 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 #content {
 	padding: 20px;
 	max-width: 800px;
-	margin: 0 auto;
+	margin: 56px auto 0px auto;
 }
 
 .card-image {
@@ -61,6 +66,16 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 
 .card-image .card-title {
 	color: #FFFFFF !important;
+}
+
+#main {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	right: 0px;
+	z-index: 0;
 }
 
 /* Styles for Setup */
@@ -73,7 +88,6 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 	bottom: 0px;
 	right: 0px;
 	background: #000000 url(../img/bg.jpg) no-repeat center fixed;
-	background-size: cover;
 	z-index: 1;
 	display: none;
 }
@@ -87,5 +101,5 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 #setup > div {
 	padding: 20px;
 	max-width: 800px;
-	margin: 0 auto;
+	margin: 56px auto 0px auto;
 }
