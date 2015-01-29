@@ -4,8 +4,10 @@ $(document).ready(function(){
 
 	if (localStorage.getItem("setup") === null) {
 
+    // Show setup because it's not complete
 		$("#setup").css("display","block", "!important");
 
+    // Actions when 'Get Started' button is pressed on setup
 		$('#getstarted').click(function() {
 			  // Test if any of the text fields are empty
 			if( (document.getElementById("first_name").value == 0) || (document.getElementById("last_name").value == 0) || (document.getElementById("zip").value == 0) )
