@@ -24,5 +24,21 @@ $(document).ready(function(){
 			}
 		});
 
+	} else {
+
+	  $.simpleWeather({
+    location: localStorage['zip'],
+    woeid: '',
+    unit: 'f',
+    success: function(weather) {
+      html = "<p>It's currently " + weather.temp + "&deg;" + weather.units.temp + " and " + weather.currently +  ".</p>";
+
+      $("#weather").html(html);
+    },
+    error: function(error) {
+      toast('There was an error fetching the weather.', 5000, 'rounded');
+    }
+    });
+
 	}
 });
