@@ -109,3 +109,13 @@ table, tr, th {
 	max-width: 800px;
 	margin: 56px auto 0px auto;
 }
+
+.btn-floating {
+  float: right;
+}
+
+.card .delete {
+  color: #e51c23 !important;
+  float: right !important;
+  margin-right: 0px !important;
+}

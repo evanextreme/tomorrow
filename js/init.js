@@ -20,7 +20,7 @@ $(document).ready(function(){
 				localStorage['lastname'] = document.getElementById("last_name").value;
 				localStorage['zip'] = document.getElementById("zip").value;
 				localStorage['setup'] = "completed";
-				localStorage["list"] = "This is a sample list item.,You can delete these easily!"
+				localStorage["list"] = '"This is a sample list item.","You can delete these easily!"';
 				location.reload();
 			}
 		});
@@ -45,7 +45,7 @@ $(document).ready(function(){
 
     // Display list
 
-    var list = JSON.parse(localStorage["list"]);
+    var list = JSON.parse("[" + localStorage["list"] + "]");
     for (var i = 0; i < list.length; ++i) {
       $( "#list" ).append('<div class="card"><div class="card-content"><p><input type="checkbox" id="test5" /> ' + list[i] + "</p></div></div>");
     }
