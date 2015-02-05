@@ -6,6 +6,7 @@ $(document).ready(function(){
 
     // Show setup because it's not complete
 		$("#setup").css("display","block", "!important");
+		$("#float").css("display","none", "!important");
 
     // Actions when 'Get Started' button is pressed on setup
 		$('#getstarted').click(function() {
