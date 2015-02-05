@@ -62,7 +62,7 @@ $(document).ready(function(){
     // Display list
 
     for (var i = 0; i < list.length; ++i) {
-      $( "#list" ).append('<div id="' + i + '" class="card"><div class="card-content"><p><span id="content">' + list[i] + '</span><a class="waves-effect waves-red btn-flat delete">Delete</a></p></div></div>');
+      $( "#list" ).append('<div id="' + i + '" class="card"><div class="card-content"><p><span id="content">' + list[i] + '</span><a class="waves-effect waves-green btn-flat delete">Done</a></p></div></div>');
     }
 
     $( ".delete" ).click(function() {
@@ -70,7 +70,7 @@ $(document).ready(function(){
       list.splice(item,1);
       $( "#" + item ).fadeOut( 500, function() {
         $( "#" + item ).remove();
-        toast('Item removed.', 5000, 'rounded');
+        toast('Item completed.', 5000, 'rounded');
       });
       saveList();
     });
