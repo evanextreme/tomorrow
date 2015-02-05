@@ -32,6 +32,8 @@ $(document).ready(function(){
 
     var list = JSON.parse("[" + localStorage["list"] + "]");
 
+    // Save list array into localStorage
+
     function saveList() {
       var temp = "";
       for (var i = 0; i < list.length; ++i) {
@@ -71,6 +73,10 @@ $(document).ready(function(){
         toast('Item removed.', 5000, 'rounded');
       });
       saveList();
+    });
+
+    $( "#float" ).click(function() {
+      toast('Not implemented!', 5000, 'rounded');
     });
 
 	}
