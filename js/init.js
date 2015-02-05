@@ -20,11 +20,14 @@ $(document).ready(function(){
 				localStorage['lastname'] = document.getElementById("last_name").value;
 				localStorage['zip'] = document.getElementById("zip").value;
 				localStorage['setup'] = "completed";
+				localStorage["list"] = "This is a sample list item.,You can delete these easily!"
 				location.reload();
 			}
 		});
 
 	} else {
+
+    // Weather forecast
 
 	  $.simpleWeather({
     location: localStorage['zip'],
@@ -39,6 +42,13 @@ $(document).ready(function(){
       toast('There was an error fetching the weather.', 5000, 'rounded');
     }
     });
+
+    // Display list
+
+    var list = JSON.parse(localStorage["list"]);
+    for (var i = 0; i < list.length; ++i) {
+      $( "#list" ).append('<div class="card"><div class="card-content"><p><input type="checkbox" id="test5" /> ' + list[i] + "</p></div></div>");
+    }
 
 	}
 });
