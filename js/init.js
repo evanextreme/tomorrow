@@ -47,8 +47,21 @@ $(document).ready(function(){
 
     var list = JSON.parse("[" + localStorage["list"] + "]");
     for (var i = 0; i < list.length; ++i) {
-      $( "#list" ).append('<div class="card"><div class="card-content"><p><input type="checkbox" id="test5" /> ' + list[i] + "</p></div></div>");
+      $( "#list" ).append('<div id="' + i + '" class="card"><div class="card-content"><p><span id="content">' + list[i] + '</span><a class="waves-effect waves-red btn-flat delete">Delete</a></p></div></div>');
     }
+
+    $(".delete").click(function() {
+      var item = $(this).parent().parent().parent().attr('id');
+      list.splice(item,1);
+
+      // Save to localStorage
+      var temp = "";
+      for (var i = 0; i < list.length; ++i) {
+        temp += '"' + list[i] + '",';
+      }
+      temp = temp.substring(0, temp.length - 1); // Cut off last comma
+      localStorage["list"] = temp;
+    });
 
 	}
 });
