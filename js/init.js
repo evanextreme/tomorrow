@@ -27,6 +27,19 @@ $(document).ready(function(){
 
 	} else {
 
+	  // Load list
+
+    var list = JSON.parse("[" + localStorage["list"] + "]");
+
+    function saveList() {
+      var temp = "";
+      for (var i = 0; i < list.length; ++i) {
+        temp += '"' + list[i] + '",';
+      }
+      temp = temp.substring(0, temp.length - 1); // Cut off last comma
+      localStorage["list"] = temp;
+    }
+
     // Weather forecast
 
 	  $.simpleWeather({
@@ -43,29 +56,19 @@ $(document).ready(function(){
     }
     });
 
-    // Load list
-
-    var list = JSON.parse("[" + localStorage["list"] + "]");
-
-    function saveList() {
-      var temp = "";
-      for (var i = 0; i < list.length; ++i) {
-        temp += '"' + list[i] + '",';
-      }
-      temp = temp.substring(0, temp.length - 1); // Cut off last comma
-      localStorage["list"] = temp;
-    }
-
     // Display list
 
     for (var i = 0; i < list.length; ++i) {
       $( "#list" ).append('<div id="' + i + '" class="card"><div class="card-content"><p><span id="content">' + list[i] + '</span><a class="waves-effect waves-red btn-flat delete">Delete</a></p></div></div>');
     }
 
-    $( ".delete").click(function() {
+    $( ".delete" ).click(function() {
       var item = $(this).parent().parent().parent().attr('id');
       list.splice(item,1);
-      $( "#" + item ).remove();
+      $( "#" + item ).fadeOut( 500, function() {
+        $( "#" + item ).remove();
+        toast('Item removed.', 5000, 'rounded');
+      });
       saveList();
     });
 
