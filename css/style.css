@@ -10,6 +10,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background: #EEEEEE;
+	overflow: none;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -60,8 +61,8 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
-	right: 0px;
 	z-index: 0;
+	overflow: auto;
 }
 
 #content {
@@ -84,6 +85,19 @@ table, tr, th {
   padding: 0px !important;
 }
 
+.card .delete {
+  color: #e51c23 !important;
+  float: right !important;
+  margin-right: 0px !important;
+}
+
+#float {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  z-index: 1;
+}
+
 /* Styles for Setup */
 
 #setup {
@@ -92,10 +106,10 @@ table, tr, th {
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
-	right: 0px;
 	background: #000000 url(../img/bg.jpg) no-repeat center fixed;
 	z-index: 1;
 	display: none;
+	overflow: auto;
 }
 
 #setup nav {
@@ -108,14 +122,4 @@ table, tr, th {
 	padding: 20px;
 	max-width: 800px;
 	margin: 56px auto 0px auto;
-}
-
-.btn-floating {
-  float: right;
-}
-
-.card .delete {
-  color: #e51c23 !important;
-  float: right !important;
-  margin-right: 0px !important;
 }
