@@ -51,6 +51,33 @@ $(document).ready(function(){
       list = JSON.parse("[" + localStorage["list"] + "]");
     }
 
+    function exportList() {
+      var temp = "";
+      for (var i = 0; i < list.length; ++i) {
+        temp += '"' + list[i] + '",';
+      }
+      temp = temp.substring(0, temp.length - 1); // Cut off last comma
+      var textToWrite = localStorage["list"];
+      var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+      var downloadLink = document.createElement("a");
+      downloadLink.download = "list.txt";
+      downloadLink.innerHTML = "Download File";
+      if (window.webkitURL != null)
+      {
+        downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+        toast('List exported.', 3000, 'rounded');
+      }
+      else
+      {
+        downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+        downloadLink.onclick = destroyClickedElement;
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+      }
+
+      downloadLink.click();
+    }
+
     reloadList();
 
     // Weather forecast
@@ -65,7 +92,7 @@ $(document).ready(function(){
       $("#weather").html(html);
     },
     error: function(error) {
-      toast('There was an error fetching the weather.', 5000, 'rounded');
+      toast('Error fetching the weather.', 5000, 'rounded');
     }
     });
 
@@ -91,6 +118,7 @@ $(document).ready(function(){
       reloadList();
       document.getElementById("newitem").value = "";
       $('#new').closeModal();
+      toast('Item added.', 5000, 'rounded');
      }
     });
 
