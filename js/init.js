@@ -31,9 +31,15 @@ $(document).ready(function(){
 
 	} else {
 
-	  // Load list
+    // Load list from localStorage
 
-    var list = JSON.parse("[" + localStorage["list"] + "]");
+    function loadList() {
+      $( "#list" ).empty();
+      var list = JSON.parse("[" + localStorage["list"] + "]");
+      for (var i = 0; i < list.length; ++i) {
+        $( "#list" ).append('<div id="' + i + '" class="card"><div class="card-content"><p><span id="content">' + list[i] + '</span><a class="waves-effect waves-green btn-flat delete">Done</a></p></div></div>');
+      }
+    }
 
     // Save list array into localStorage
 
@@ -46,11 +52,10 @@ $(document).ready(function(){
       localStorage["list"] = temp;
     }
 
-    function loadList() {
-      for (var i = 0; i < list.length; ++i) {
-        $( "#list" ).append('<div id="' + i + '" class="card"><div class="card-content"><p><span id="content">' + list[i] + '</span><a class="waves-effect waves-green btn-flat delete">Done</a></p></div></div>');
-      }
-    }
+	  // Load list
+
+    var list = JSON.parse("[" + localStorage["list"] + "]");
+    loadList();
 
     // Weather forecast
 
@@ -80,12 +85,16 @@ $(document).ready(function(){
 
     $( "#float" ).click(function() {
       $('#new').openModal();
+      $('#newitem').focus();
     });
 
     $( "#additem" ).click(function() {
       var newitem = document.getElementById("newitem").value;
       list.unshift(newitem);
       saveList();
+      loadList();
+      document.getElementById("newitem").value = "";
+      $('#additem').closeModal();
     });
 
 	}
