@@ -55,6 +55,17 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 	color: #000000 !important;
 }
 
+.preloader-wrapper {
+	position:absolute;
+	width:300px;
+	height:200px;
+	z-index:15;
+	top:50%;
+	left:50%;
+	margin:-64px 0 0 -35px;
+	z-index: 0;
+}
+
 #main {
 	position: absolute;
 	top: 0px;
@@ -86,12 +97,13 @@ table, tr, th {
 }
 
 .card .delete {
-  color: #e51c23 !important;
+  color: #259b24 !important;
   float: right !important;
   margin-right: 0px !important;
 }
 
 #float {
+  background: #259b24;
   position: absolute;
   right: 20px;
   bottom: 10px;
@@ -108,7 +120,6 @@ table, tr, th {
 	bottom: 0px;
 	background: #000000 url(../img/bg.jpg) no-repeat center fixed;
 	z-index: 1;
-	display: none;
 	overflow: auto;
 }
 

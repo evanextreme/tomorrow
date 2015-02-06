@@ -1,12 +1,15 @@
 $(document).ready(function(){
 
+  $('#setup').hide();
+  $('#main').hide();
+  $('#float').hide();
+
 	// Code for setup process
 
 	if (localStorage.getItem("setup") === null) {
 
     // Show setup because it's not complete
-		$("#setup").css("display","block", "!important");
-		$("#float").css("display","none", "!important");
+		$('#setup').show();
 
     // Actions when 'Get Started' button is pressed on setup
 		$('#getstarted').click(function() {
@@ -43,6 +46,12 @@ $(document).ready(function(){
       localStorage["list"] = temp;
     }
 
+    function loadList() {
+      for (var i = 0; i < list.length; ++i) {
+        $( "#list" ).append('<div id="' + i + '" class="card"><div class="card-content"><p><span id="content">' + list[i] + '</span><a class="waves-effect waves-green btn-flat delete">Done</a></p></div></div>');
+      }
+    }
+
     // Weather forecast
 
 	  $.simpleWeather({
@@ -59,12 +68,6 @@ $(document).ready(function(){
     }
     });
 
-    // Display list
-
-    for (var i = 0; i < list.length; ++i) {
-      $( "#list" ).append('<div id="' + i + '" class="card"><div class="card-content"><p><span id="content">' + list[i] + '</span><a class="waves-effect waves-green btn-flat delete">Done</a></p></div></div>');
-    }
-
     $( ".delete" ).click(function() {
       var item = $(this).parent().parent().parent().attr('id');
       list.splice(item,1);
@@ -76,8 +79,21 @@ $(document).ready(function(){
     });
 
     $( "#float" ).click(function() {
-      toast('Not implemented!', 5000, 'rounded');
+      $('#new').openModal();
+    });
+
+    $( "#additem" ).click(function() {
+      var newitem = document.getElementById("newitem").value;
+      list.unshift(newitem);
+      saveList();
     });
 
 	}
+
+  $(window).load(function() {
+   $('.preloader-wrapper').fadeOut( "slow", function() {});
+   $('#main').fadeIn( "slow", function() {});
+   $('#float').fadeIn( "slow", function() {});
+  });
+
 });
