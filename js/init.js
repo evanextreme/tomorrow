@@ -105,24 +105,28 @@ $(document).ready(function(){
 			list.splice(item,1);
 			$( "#" + item ).fadeOut( 500, function() {
 				reloadList();
-				toast('Item completed.', 5000, 'rounded');
+				toast('Task completed.', 5000, 'rounded');
 			});
 		});
 
 		$( "#float" ).click(function() {
 			$('#new').openModal();
-			$('#newitem').focus();
+			$('#task').focus();
 		});
 
-		$('#newitem').keypress(function(event){
+		$('#task').keypress(function(event){
 		 var keycode = (event.keyCode ? event.keyCode : event.which);
 		 if(keycode == '13'){
-			var newitem = document.getElementById("newitem").value;
-			list.unshift(newitem);
-			reloadList();
-			document.getElementById("newitem").value = "";
-			$('#new').closeModal();
-			toast('Item added.', 5000, 'rounded');
+		 	if(document.getElementById("task").value == 0) {
+				toast('Enter a task!', 5000, 'rounded');
+			} else {
+				var task = document.getElementById("task").value;
+				list.unshift(task);
+				reloadList();
+				document.getElementById("task").value = "";
+				$('#new').closeModal();
+				toast('Task added.', 5000, 'rounded');
+			}
 		 }
 		});
 
