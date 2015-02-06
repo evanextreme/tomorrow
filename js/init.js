@@ -42,10 +42,14 @@ $(document).ready(function(){
       }
       temp = temp.substring(0, temp.length - 1); // Cut off last comma
       localStorage["list"] = temp;
-      if ($('#list').length > 0) {
+      if($('#list').length > 0) {
         $( "#list" ).empty();
-        for (var i = 0; i < list.length; ++i) {
-          $( "#list" ).append('<div id="' + i + '" class="card"><div class="card-content"><p><span id="content">' + list[i] + '</span><a class="waves-effect waves-green btn-flat delete">Done</a></p></div></div>');
+        if(list.length === 0){
+          $( "#list" ).append('<div class="card"><div class="card-content"><p><i>Theres nothing here! Add a list item by pressing the Add button in the lower-right corner of the screen.</i></p></div></div>');
+        } else {
+          for (var i = 0; i < list.length; ++i) {
+            $( "#list" ).append('<div id="' + i + '" class="card"><div class="card-content"><p><span id="content">' + list[i] + '</span><a class="waves-effect waves-green btn-flat delete">Done</a></p></div></div>');
+          }
         }
       }
       list = JSON.parse("[" + localStorage["list"] + "]");
@@ -96,7 +100,7 @@ $(document).ready(function(){
     }
     });
 
-    $( ".delete" ).click(function() {
+    $(document).on('click', ".delete", function() {
       var item = $(this).parent().parent().parent().attr('id');
       list.splice(item,1);
       $( "#" + item ).fadeOut( 500, function() {
