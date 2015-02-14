@@ -1,119 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-	<title>Tomorrow</title>
-	<script src="jquery-2.1.1.min.js"></script>
-	<script src="js/materialize.min.js"></script>
-	<script src="js/weather.js"></script>
-	<link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Tomorrow</title>
+
+  <!-- CSS  -->
+  <script src="js/materialize.min.js"></script>
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+ <nav class="white" role="navigation">
+    <div class="container">
+      <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">
+        <img class="responsive-img" src="img/logo.png">
+      </a>
+        <ul id="nav-mobile" class="right side-nav">
+          <li><a href="tomorrow.html">List</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="about.html">About</a></li>
 
-<div id="new" class="modal">
-	<p>Type in a new task, and press Enter on your keyboard to add it.</p>
-	<p><input id="task" type="text" placeholder="Type in a task here..."></p>
-</div>
+        </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </div>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br><br>
+      <div class="card">
+        <h5 class="center">Stop worrying, plan for Tomorrow</h5>
+      </div>
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header"><i class="mdi-social-people"></i>Built for humans</div>
+          <div class="collapsible-body"><p>No one wants to use a planer that is deigned for robots. So why do we ensist on doing so? Most people never know exactly when they need to complete a task, only that they need to complete a task the next day. We designed our planner around this, by only letting you plan tasks for Tomorrow. Soon we will include automatic reminders throughout the day so that you don't need to plan your life around tasks, but so that you can plan tasks around your life.</p></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="mdi-content-send"></i>Light</div>
+          <div class="collapsible-body"><p>Tomorrow is built using the latest in web and mobile technology. Our Android app is specifically designed to use minimal resources and battery, and our web version is designed to run on even the oldest of computers, while still feeling snappy and responsive. We are available wherever you are, to help you get whatever you need done.</p></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="mdi-toggle-check-box"></i>Productive</div>
+          <div class="collapsible-body"><p>Tomorrow is designed to make sure you get everything that you need to do out of the way, so you can live your life. We have built productivity first and foremost, by not including many features other apps have. You are only able to plan tasks the day before, and you are not able to plan for tomorrow until you have taken care of today. We have noticed this signifigantly increases productivity when used versus other applications.</p></div>
+        </li>
+      </ul>
 
-<div id="main">
+      </div>
+    </div>
+  </div>
+<div class="container"
 
-	<nav class="navbar white">
-		<div class="nav-wrapper">
-			<a id="logo-container" href="#" class="brand-logo"><img class="responsive-img" src="img/logo.png"></a>
-		</div>
-	</nav>
+  <div class="container">
+    <div class="section">
 
-	<div id="content">
-	<h3>Today</h3>
-	<span id="weather"></span>
-	<span id="list"></span>
-	</div>
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4"> </div>
 
-</div>
+        <div class="col s12 m4"> </div>
 
-<div id="setup">
+        <div class="col s12 m4">
+          <div class="icon-block"> </div>
+        </div>
+      </div>
 
-	<nav class="navbar">
-		<div class="nav-wrapper">
-			<a id="logo-container" href="#" class="brand-logo"><img class="responsive-img" src="img/logowhite.png"></a>
-		</div>
-	</nav>
+    </div>
 
-	<div id="content">
-		<div class="card">
-			<div class="card-content">
-				<span class="card-title">Let us get to know you</span>
-				<p>Give Tomorrow some basic info so we can personalize your experience.</p>
-				<div class="row">
-					<div class="input-field col s6">
-						<input id="first_name" type="text" class="validate">
-						<label for="first_name">First Name</label>
-					</div>
-					<div class="input-field col s6">
-						<input id="last_name" type="text" class="validate">
-						<label for="last_name">Last Name</label>
-					</div>
-					<div class="input-field col s12">
-						<input id="zip" type="text" class="validate">
-						<label for="zip">City or ZIP Code</label>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<a href="#" id="getstarted" class="btn-large waves-effect waves-light black lighten-1 col s12">Get Started</a>
-		</div>
-	</div>
+    <div class="section">
 
-</div>
+    </div>
+  </div>
 
-<a id="float" class="btn-floating btn-large waves-effect waves-light"><i class="mdi-content-add"></i></a>
 
-<div class="preloader-wrapper big active">
-	<div class="spinner-layer spinner-blue">
-	<div class="circle-clipper left">
-	<div class="circle"></div>
-	</div><div class="gap-patch">
-	<div class="circle"></div>
-	</div><div class="circle-clipper right">
-	<div class="circle"></div>
-	</div>
-	</div>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
 
-	<div class="spinner-layer spinner-red">
-	<div class="circle-clipper left">
-	<div class="circle"></div>
-	</div><div class="gap-patch">
-	<div class="circle"></div>
-	</div><div class="circle-clipper right">
-	<div class="circle"></div>
-	</div>
-	</div>
-
-	<div class="spinner-layer spinner-yellow">
-	<div class="circle-clipper left">
-	<div class="circle"></div>
-	</div><div class="gap-patch">
-	<div class="circle"></div>
-	</div><div class="circle-clipper right">
-	<div class="circle"></div>
-	</div>
-	</div>
-
-	<div class="spinner-layer spinner-green">
-	<div class="circle-clipper left">
-	<div class="circle"></div>
-	</div><div class="gap-patch">
-	<div class="circle"></div>
-	</div><div class="circle-clipper right">
-	<div class="circle"></div>
-	</div>
-	</div>
-</div>
-
-<script src="js/init.js"></script>
-
-</body>
+  </body>
 </html>
