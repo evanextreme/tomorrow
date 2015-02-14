@@ -4,32 +4,8 @@ $(document).ready(function(){
 	$('#main').hide();
 	$('#float').hide();
 
-	// Code for setup process
-
-	if (localStorage.getItem("setup") === null) {
-
-		// Show setup because it's not complete
-		$('#setup').show();
-
-		// Actions when 'Get Started' button is pressed on setup
-		$('#getstarted').click(function() {
-				// Test if any of the text fields are empty
-			if( (document.getElementById("first_name").value == 0) || (document.getElementById("last_name").value == 0) || (document.getElementById("zip").value == 0) )
-			{
-				// Tell user to fill out everything
-				toast('Fill out everything and try again!', 5000, 'rounded');
-			} else {
-				// Save contents of text fields to localStorage
-				localStorage['firstname'] = document.getElementById("first_name").value;
-				localStorage['lastname'] = document.getElementById("last_name").value;
-				localStorage['zip'] = document.getElementById("zip").value;
-				localStorage['setup'] = "completed";
-				localStorage["list"] = '"This is a sample list item.","You can delete these easily!"';
-				location.reload();
-			}
-		});
-
-	} else {
+	// If setup is marked as complete
+	if (localStorage.getItem("setup") === "completed") {
 
 		// Load list from localStorage
 
@@ -130,12 +106,38 @@ $(document).ready(function(){
 		 }
 		});
 
-	}
+		$(window).load(function() {
+			$('.preloader-wrapper').fadeOut( "slow", function() {});
+			$('#main').fadeIn( "slow", function() {});
+			$('#float').fadeIn( "slow", function() {});
+		});
 
-	$(window).load(function() {
-		$('.preloader-wrapper').fadeOut( "slow", function() {});
-		$('#main').fadeIn( "slow", function() {});
-		$('#float').fadeIn( "slow", function() {});
-	});
+	// If setup is not marked as complete
+	} else if (localStorage.getItem("setup") === null) {
+
+		// Show setup because it's not complete
+		$('#setup').show();
+
+		// Actions when 'Get Started' button is pressed on setup
+		$('#getstarted').click(function() {
+				// Test if any of the text fields are empty
+			if( (document.getElementById("first_name").value == 0) || (document.getElementById("last_name").value == 0) || (document.getElementById("zip").value == 0) )
+			{
+				// Tell user to fill out everything
+				toast('Fill out everything and try again!', 5000, 'rounded');
+			} else {
+				// Save contents of text fields to localStorage
+				localStorage['firstname'] = document.getElementById("first_name").value;
+				localStorage['lastname'] = document.getElementById("last_name").value;
+				localStorage['zip'] = document.getElementById("zip").value;
+				localStorage['setup'] = "completed";
+				localStorage["list"] = '"This is a sample list item.","You can delete these easily!"';
+				location.reload();
+			}
+		});
+
+	} else {
+		console.log("insert error message here or whatver");
+	}
 
 });
