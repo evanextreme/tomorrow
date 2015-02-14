@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<title>Tomorrow</title>
+	<script src="jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/weather.js"></script>
+	<link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+<div id="new" class="modal">
+	<p>Type in a new task, and press Enter on your keyboard to add it.</p>
+	<p><input id="task" type="text" placeholder="Type in a task here..."></p>
+</div>
+
+<div id="main">
+
+	<nav class="navbar white">
+		<div class="nav-wrapper">
+			<a id="logo-container" href="#" class="brand-logo"><img class="responsive-img" src="img/logo.png"></a>
+		</div>
+	</nav>
+
+	<div id="content">
+	<h3>Today</h3>
+	<span id="weather"></span>
+	<span id="list"></span>
+	</div>
+
+</div>
+
+<div id="setup">
+
+	<nav class="navbar">
+		<div class="nav-wrapper">
+			<a id="logo-container" href="#" class="brand-logo"><img class="responsive-img" src="img/logowhite.png"></a>
+		</div>
+	</nav>
+
+	<div id="content">
+		<div class="card">
+			<div class="card-content">
+				<span class="card-title">Let us get to know you</span>
+				<p>Give Tomorrow some basic info so we can personalize your experience.</p>
+				<div class="row">
+					<div class="input-field col s6">
+						<input id="first_name" type="text" class="validate">
+						<label for="first_name">First Name</label>
+					</div>
+					<div class="input-field col s6">
+						<input id="last_name" type="text" class="validate">
+						<label for="last_name">Last Name</label>
+					</div>
+					<div class="input-field col s12">
+						<input id="zip" type="text" class="validate">
+						<label for="zip">City or ZIP Code</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<a href="#" id="getstarted" class="btn-large waves-effect waves-light black lighten-1 col s12">Get Started</a>
+		</div>
+	</div>
+
+</div>
+
+<a id="float" class="btn-floating btn-large waves-effect waves-light"><i class="mdi-content-add"></i></a>
+
+<div class="preloader-wrapper big active">
+	<div class="spinner-layer spinner-blue">
+	<div class="circle-clipper left">
+	<div class="circle"></div>
+	</div><div class="gap-patch">
+	<div class="circle"></div>
+	</div><div class="circle-clipper right">
+	<div class="circle"></div>
+	</div>
+	</div>
+
+	<div class="spinner-layer spinner-red">
+	<div class="circle-clipper left">
+	<div class="circle"></div>
+	</div><div class="gap-patch">
+	<div class="circle"></div>
+	</div><div class="circle-clipper right">
+	<div class="circle"></div>
+	</div>
+	</div>
+
+	<div class="spinner-layer spinner-yellow">
+	<div class="circle-clipper left">
+	<div class="circle"></div>
+	</div><div class="gap-patch">
+	<div class="circle"></div>
+	</div><div class="circle-clipper right">
+	<div class="circle"></div>
+	</div>
+	</div>
+
+	<div class="spinner-layer spinner-green">
+	<div class="circle-clipper left">
+	<div class="circle"></div>
+	</div><div class="gap-patch">
+	<div class="circle"></div>
+	</div><div class="circle-clipper right">
+	<div class="circle"></div>
+	</div>
+	</div>
+</div>
+
+<script src="js/init.js"></script>
+
+</body>
+</html>
