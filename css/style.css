@@ -100,6 +100,7 @@ table, tr, th {
   color: #259b24 !important;
   float: right !important;
   margin-right: 0px !important;
+  margin-bottom: 0px !important;
 }
 
 #float {
@@ -108,6 +109,11 @@ table, tr, th {
   right: 20px;
   bottom: 10px;
   z-index: 1;
+}
+
+#new {
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 /* Styles for Setup */
