@@ -19,12 +19,17 @@ $(document).ready(function(){
 			temp = temp.substring(0, temp.length - 1); // Cut off last comma
 			localStorage["list"] = temp;
 			if($('#list').length > 0) {
-				$( "#list" ).empty();
+				$("#list").empty();
 				if(list.length === 0){
-					$( "#list" ).append('<div class="card"><div class="card-content"><p><i>Theres nothing here! Add a list item by pressing the Add button in the lower-right corner of the screen.</i></p></div></div>');
+					$("#list").append('<div class="card"><div class="card-content"><p><i>Theres nothing here! Add a list item by pressing the Add button in the lower-right corner of the screen.</i></p></div></div>');
 				} else {
 					for (var i = 0; i < list.length; ++i) {
-						$( "#list" ).append('<div id="' + i + '" class="card"><div class="card-content"><p><span id="content">' + list[i] + '</span><a class="waves-effect waves-green btn-flat delete">Done</a></p></div></div>');
+						$( "#list" ).append('<div id="' + i + '" class="card"><div class="card-content"><div class="task">' + list[i] + '</div><div class="actions"><a class="waves-effect waves-green btn-flat delete">Dismiss</a></div></div></div>');
+						if (list[i].match(/http:(.*?) /i)[1]) {
+							var link = "http:" + list[i].match(/http:(.*?) /i)[1];
+							console.log(link);
+							$( ".actions" ).append('<a href="' + link + '" target="_blank" class="waves-effect waves-green btn-flat link">Open Link</a>');
+						}
 					}
 				}
 			}
