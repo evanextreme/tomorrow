@@ -96,11 +96,28 @@ table, tr, th {
   padding: 0px !important;
 }
 
+.task {
+	width: 100%;
+	word-wrap: break-word;
+	margin-bottom: 10px;
+}
+
+.actions {
+	height: 36px !important;
+}
+
+.card .delete, .card .link {
+	margin-right: 0px !important;
+	margin-bottom: 0px !important;
+	float: right;
+}
+
 .card .delete {
-  color: #259b24 !important;
-  float: right !important;
-  margin-right: 0px !important;
-  margin-bottom: 0px !important;
+	color: #259b24 !important;
+}
+
+.card .link {
+	color: #3f51b5 !important;
 }
 
 #float {
