@@ -18,6 +18,7 @@ $(document).ready(function(){
 			}
 			temp = temp.substring(0, temp.length - 1); // Cut off last comma
 			localStorage["list"] = temp;
+			var url = new RegExp(/(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim);
 			if($('#list').length > 0) {
 				$("#list").empty();
 				if(list.length === 0){
@@ -25,10 +26,10 @@ $(document).ready(function(){
 				} else {
 					for (var i = 0; i < list.length; ++i) {
 						$( "#list" ).append('<div id="' + i + '" class="card"><div class="card-content"><div class="task">' + list[i] + '</div><div class="actions"><a class="waves-effect waves-green btn-flat delete">Dismiss</a></div></div></div>');
-						if (list[i].match(/http:(.*?) /i)[1]) {
-							var link = "http:" + list[i].match(/http:(.*?) /i)[1];
-							console.log(link);
-							$( ".actions" ).append('<a href="' + link + '" target="_blank" class="waves-effect waves-green btn-flat link">Open Link</a>');
+						// Detect links in task
+						var result;
+						while((result = url.exec(list[i])) !== null) {
+							$( ".actions" ).append('<a href="' + result[1] + '" target="_blank" class="waves-effect waves-green btn-flat link">Open Link</a>');
 						}
 					}
 				}
