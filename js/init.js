@@ -26,7 +26,7 @@ $(document).ready(function(){
 					$("#todaylist").append('<div class="card"><div class="card-content"><p><i>Theres nothing here! Add a todaylist item by pressing the Add button in the lower-right corner of the screen.</i></p></div></div>');
 				} else {
 					for (var i = 0; i < todaylist.length; ++i) {
-						$( "#todaylist" ).append('<div id="' + i + '" class="card"><div class="card-content"><div class="task task' + i + '">' + todaylist[i] + '</div><div class="actions actions' + i + '"><a class="waves-effect waves-green btn-flat delete">Dismiss</a></div></div></div>');
+						$( "#todaylist" ).append('<div id="' + i + '" class="card"><div class="card-content"><div class="task task' + i + '">' + todaylist[i] + '</div><div class="actions actions' + i + '"><a class="waves-effect waves-green btn-flat delete">Dismiss</a><a class="waves-effect waves-green btn-flat push">Push</a></div></div></div>');
 						// Detect links in task
 						var result;
 						while((result = url.exec(todaylist[i])) !== null) {
@@ -48,10 +48,10 @@ $(document).ready(function(){
 			if($('#tomorrowlist').length > 0) {
 				$("#tomorrowlist").empty();
 				if(tomorrowlist.length === 0){
-					$("#tomorrowlist").append('<div class="card"><div class="card-content"><p><i>This is where your items pushed to tomorrow appear.</i></p></div></div>');
+					$("#tomorrowlist").append('<div class="card"><div class="card-content"><i>This is where your items pushed to tomorrow appear.</i></div></div>');
 				} else {
 					for (var i = 0; i < tomorrowlist.length; ++i) {
-						$( "#tomorrowlist" ).append('<div id="' + i + '" class="card"><div class="card-content"><div class="task">' + tomorrowlist[i] + '</div><div class="actions"><a class="waves-effect waves-green btn-flat delete">Dismiss</a></div></div></div>');
+						$( "#tomorrowlist" ).append('<div id="' + i + '" class="card"><div class="card-content"><div class="task">' + tomorrowlist[i] + '</div></div></div>');
 					}
 				}
 			}
@@ -85,6 +85,11 @@ $(document).ready(function(){
 				reloadtomorrowlist();
 				toast('Task completed.', 5000, 'rounded');
 			});
+		});
+
+		$(document).on('click', ".push", function() {
+			$( "body" ).prepend( '<div id="confirm" class="modal"><p>Are you sure you want to push this task to tomorrow?</p><div class="modal-footer"><a href="#" class="waves-effect waves-green btn-flat modal-action modal-close confirm-ok">OK</a><a href="#" class="waves-effect waves-red btn-flat modal-action modal-close confirm-cancel">Cancel</a></div></div>' );
+			$('#confirm').openModal();
 		});
 
 		$( "#float" ).click(function() {
