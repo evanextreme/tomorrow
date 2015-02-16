@@ -26,11 +26,11 @@ $(document).ready(function(){
 					$("#todaylist").append('<div class="card"><div class="card-content"><p><i>Theres nothing here! Add a todaylist item by pressing the Add button in the lower-right corner of the screen.</i></p></div></div>');
 				} else {
 					for (var i = 0; i < todaylist.length; ++i) {
-						$( "#todaylist" ).append('<div id="' + i + '" class="card"><div class="card-content"><div class="task">' + todaylist[i] + '</div><div class="actions"><a class="waves-effect waves-green btn-flat delete">Dismiss</a></div></div></div>');
+						$( "#todaylist" ).append('<div id="' + i + '" class="card"><div class="card-content"><div class="task task' + i + '">' + todaylist[i] + '</div><div class="actions actions' + i + '"><a class="waves-effect waves-green btn-flat delete">Dismiss</a></div></div></div>');
 						// Detect links in task
 						var result;
 						while((result = url.exec(todaylist[i])) !== null) {
-							$( ".actions" ).append('<a href="' + result[1] + '" target="_blank" class="waves-effect waves-green btn-flat link">Open Link</a>');
+							$( ".actions" + i ).append('<a href="' + result[1] + '" target="_blank" class="waves-effect waves-green btn-flat link">Open Link</a>');
 						}
 					}
 				}
