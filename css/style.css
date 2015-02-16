@@ -40,6 +40,10 @@ body {
 	.card-image .card-title {
 		font-size: 30px;
 	}
+	.card .delete, .card .link, .card .push {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
 }
 
 nav {
@@ -102,14 +106,25 @@ table, tr, th {
 	margin-bottom: 10px;
 }
 
+#tomorrowlist .card {
+	background: #D3D3D3 !important;
+	color: #7e7e7e !important;
+}
+
 .actions {
 	height: 36px !important;
 }
 
-.card .delete, .card .link {
+.card .delete, .card .link, .card .push {
 	margin-right: 0px !important;
 	margin-bottom: 0px !important;
+	padding-left: 10px;
+	padding-right: 10px;
 	float: right;
+}
+
+.card .push {
+	color: #ffab40 !important;
 }
 
 .card .delete {
@@ -129,6 +144,11 @@ table, tr, th {
 }
 
 #new {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.modal p {
 	padding-left: 10px;
 	padding-right: 10px;
 }
