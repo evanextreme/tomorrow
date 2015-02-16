@@ -88,8 +88,18 @@ $(document).ready(function(){
 		});
 
 		$(document).on('click', ".push", function() {
-			$( "body" ).prepend( '<div id="confirm" class="modal"><p>Are you sure you want to push this task to tomorrow?</p><div class="modal-footer"><a href="#" class="waves-effect waves-green btn-flat modal-action modal-close confirm-ok">OK</a><a href="#" class="waves-effect waves-red btn-flat modal-action modal-close confirm-cancel">Cancel</a></div></div>' );
+			var item = $(this).parent().parent().parent().attr('id');
+			var task = $( ".task" + item ).text();
 			$('#confirm').openModal();
+			$( ".confirm-ok" ).click(function() {
+				todaylist.splice(item,1);
+				tomorrowlist.unshift(task);
+				$( "#" + item ).fadeOut( 500, function() {
+					reloadtodaylist();
+					reloadtomorrowlist();
+					toast('Task pushed to tomorrow.', 5000, 'rounded');
+				});
+			});
 		});
 
 		$( "#float" ).click(function() {
