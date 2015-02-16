@@ -7,51 +7,51 @@ $(document).ready(function(){
 	// If setup is marked as complete
 	if (localStorage.getItem("setup") === "completed") {
 
-		// Load list from localStorage
+		// Load todaylist from localStorage
 
-		var list = JSON.parse("[" + localStorage["list"] + "]");
+		var todaylist = JSON.parse("[" + localStorage["todaylist"] + "]");
 
-		function reloadList() {
+		function reloadtodaylist() {
 			var temp = "";
-			for (var i = 0; i < list.length; ++i) {
-				temp += '"' + list[i] + '",';
+			for (var i = 0; i < todaylist.length; ++i) {
+				temp += '"' + todaylist[i] + '",';
 			}
 			temp = temp.substring(0, temp.length - 1); // Cut off last comma
-			localStorage["list"] = temp;
+			localStorage["todaylist"] = temp;
 			var url = new RegExp(/(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim);
-			if($('#list').length > 0) {
-				$("#list").empty();
-				if(list.length === 0){
-					$("#list").append('<div class="card"><div class="card-content"><p><i>Theres nothing here! Add a list item by pressing the Add button in the lower-right corner of the screen.</i></p></div></div>');
+			if($('#todaylist').length > 0) {
+				$("#todaylist").empty();
+				if(todaylist.length === 0){
+					$("#todaylist").append('<div class="card"><div class="card-content"><p><i>Theres nothing here! Add a todaylist item by pressing the Add button in the lower-right corner of the screen.</i></p></div></div>');
 				} else {
-					for (var i = 0; i < list.length; ++i) {
-						$( "#list" ).append('<div id="' + i + '" class="card"><div class="card-content"><div class="task">' + list[i] + '</div><div class="actions"><a class="waves-effect waves-green btn-flat delete">Dismiss</a></div></div></div>');
+					for (var i = 0; i < todaylist.length; ++i) {
+						$( "#todaylist" ).append('<div id="' + i + '" class="card"><div class="card-content"><div class="task">' + todaylist[i] + '</div><div class="actions"><a class="waves-effect waves-green btn-flat delete">Dismiss</a></div></div></div>');
 						// Detect links in task
 						var result;
-						while((result = url.exec(list[i])) !== null) {
+						while((result = url.exec(todaylist[i])) !== null) {
 							$( ".actions" ).append('<a href="' + result[1] + '" target="_blank" class="waves-effect waves-green btn-flat link">Open Link</a>');
 						}
 					}
 				}
 			}
-			list = JSON.parse("[" + localStorage["list"] + "]");
+			todaylist = JSON.parse("[" + localStorage["todaylist"] + "]");
 		}
 
-		function exportList() {
+		function exporttodaylist() {
 			var temp = "";
-			for (var i = 0; i < list.length; ++i) {
-				temp += '"' + list[i] + '",';
+			for (var i = 0; i < todaylist.length; ++i) {
+				temp += '"' + todaylist[i] + '",';
 			}
 			temp = temp.substring(0, temp.length - 1); // Cut off last comma
-			var textToWrite = localStorage["list"];
+			var textToWrite = localStorage["todaylist"];
 			var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
 			var downloadLink = document.createElement("a");
-			downloadLink.download = "list.txt";
+			downloadLink.download = "todaylist.txt";
 			downloadLink.innerHTML = "Download File";
 			if (window.webkitURL != null)
 			{
 				downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
-				toast('List exported.', 3000, 'rounded');
+				toast('todaylist exported.', 3000, 'rounded');
 			}
 			else
 			{
@@ -64,7 +64,7 @@ $(document).ready(function(){
 			downloadLink.click();
 		}
 
-		reloadList();
+		reloadtodaylist();
 
 		// Weather forecast
 
@@ -84,9 +84,9 @@ $(document).ready(function(){
 
 		$(document).on('click', ".delete", function() {
 			var item = $(this).parent().parent().parent().attr('id');
-			list.splice(item,1);
+			todaylist.splice(item,1);
 			$( "#" + item ).fadeOut( 500, function() {
-				reloadList();
+				reloadtodaylist();
 				toast('Task completed.', 5000, 'rounded');
 			});
 		});
@@ -103,8 +103,8 @@ $(document).ready(function(){
 				toast('Enter a task!', 5000, 'rounded');
 			} else {
 				var task = document.getElementById("task").value;
-				list.unshift(task);
-				reloadList();
+				todaylist.unshift(task);
+				reloadtodaylist();
 				document.getElementById("task").value = "";
 				$('#new').closeModal();
 				toast('Task added.', 5000, 'rounded');
@@ -119,7 +119,7 @@ $(document).ready(function(){
 		});
 
 	// If setup is not marked as complete
-	} else if (localStorage.getItem("setup") === null) {
+	} else if (localStorage.getItem("setup") != "completed") {
 
 		// Show setup because it's not complete
 		$('#setup').show();
@@ -137,7 +137,7 @@ $(document).ready(function(){
 				localStorage['lastname'] = document.getElementById("last_name").value;
 				localStorage['zip'] = document.getElementById("zip").value;
 				localStorage['setup'] = "completed";
-				localStorage["list"] = '"This is a sample list item.","You can delete these easily!"';
+				localStorage["todaylist"] = '"This is a sample todaylist item.","You can delete these easily!"';
 				location.reload();
 			}
 		});
