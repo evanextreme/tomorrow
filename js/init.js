@@ -73,7 +73,7 @@ $(document).ready(function(){
 			$("#weather").html(html);
 		},
 		error: function(error) {
-			toast('Error fetching the weather.', 5000, 'rounded');
+			toast('Error fetching the weather.', 3000, 'rounded');
 		}
 		});
 
@@ -83,7 +83,7 @@ $(document).ready(function(){
 			$( "#" + item ).fadeOut( 500, function() {
 				reloadtodaylist();
 				reloadtomorrowlist();
-				toast('Task completed.', 5000, 'rounded');
+				toast('Task completed.', 3000, 'rounded');
 			});
 		});
 
@@ -94,10 +94,11 @@ $(document).ready(function(){
 			$( ".confirm-ok" ).click(function() {
 				todaylist.splice(item,1);
 				tomorrowlist.unshift(task);
-				$( "#" + item ).fadeOut( 500, function() {
+				console.log(tomorrowlist);
+				$( "#todaylist > #" + item ).fadeOut( 500, function() {
 					reloadtodaylist();
 					reloadtomorrowlist();
-					toast('Task pushed to tomorrow.', 5000, 'rounded');
+					toast('Task pushed to tomorrow.', 3000, 'rounded');
 				});
 			});
 		});
@@ -111,7 +112,7 @@ $(document).ready(function(){
 		 var keycode = (event.keyCode ? event.keyCode : event.which);
 		 if(keycode == '13'){
 		 	if(document.getElementById("task").value == 0) {
-				toast('Enter a task!', 5000, 'rounded');
+				toast('Enter a task!', 3000, 'rounded');
 			} else {
 				var task = document.getElementById("task").value;
 				todaylist.unshift(task);
@@ -119,7 +120,7 @@ $(document).ready(function(){
 				reloadtomorrowlist();
 				document.getElementById("task").value = "";
 				$('#new').closeModal();
-				toast('Task added.', 5000, 'rounded');
+				toast('Task added.', 3000, 'rounded');
 			}
 		 }
 		});
@@ -142,7 +143,7 @@ $(document).ready(function(){
 			if( (document.getElementById("first_name").value == 0) || (document.getElementById("last_name").value == 0) || (document.getElementById("zip").value == 0) )
 			{
 				// Tell user to fill out everything
-				toast('Fill out everything and try again!', 5000, 'rounded');
+				toast('Fill out everything and try again!', 3000, 'rounded');
 			} else {
 				// Save contents of text fields to localStorage
 				localStorage['firstname'] = document.getElementById("first_name").value;
