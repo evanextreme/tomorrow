@@ -10,6 +10,7 @@ $(document).ready(function(){
 		// Load todaylist from localStorage
 
 		var todaylist = JSON.parse("[" + localStorage["todaylist"] + "]");
+		var tomorrowlist = JSON.parse("[" + localStorage["tomorrowlist"] + "]");
 
 		function reloadtodaylist() {
 			var temp = "";
@@ -37,34 +38,28 @@ $(document).ready(function(){
 			todaylist = JSON.parse("[" + localStorage["todaylist"] + "]");
 		}
 
-		function exporttodaylist() {
+		function reloadtomorrowlist() {
 			var temp = "";
-			for (var i = 0; i < todaylist.length; ++i) {
-				temp += '"' + todaylist[i] + '",';
+			for (var i = 0; i < tomorrowlist.length; ++i) {
+				temp += '"' + tomorrowlist[i] + '",';
 			}
 			temp = temp.substring(0, temp.length - 1); // Cut off last comma
-			var textToWrite = localStorage["todaylist"];
-			var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
-			var downloadLink = document.createElement("a");
-			downloadLink.download = "todaylist.txt";
-			downloadLink.innerHTML = "Download File";
-			if (window.webkitURL != null)
-			{
-				downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
-				toast('todaylist exported.', 3000, 'rounded');
+			localStorage["tomorrowlist"] = temp;
+			if($('#tomorrowlist').length > 0) {
+				$("#tomorrowlist").empty();
+				if(tomorrowlist.length === 0){
+					$("#tomorrowlist").append('<div class="card"><div class="card-content"><p><i>This is where your items pushed to tomorrow appear.</i></p></div></div>');
+				} else {
+					for (var i = 0; i < tomorrowlist.length; ++i) {
+						$( "#tomorrowlist" ).append('<div id="' + i + '" class="card"><div class="card-content"><div class="task">' + tomorrowlist[i] + '</div><div class="actions"><a class="waves-effect waves-green btn-flat delete">Dismiss</a></div></div></div>');
+					}
+				}
 			}
-			else
-			{
-				downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-				downloadLink.onclick = destroyClickedElement;
-				downloadLink.style.display = "none";
-				document.body.appendChild(downloadLink);
-			}
-
-			downloadLink.click();
+			tomorrowlist = JSON.parse("[" + localStorage["tomorrowlist"] + "]");
 		}
 
 		reloadtodaylist();
+		reloadtomorrowlist();
 
 		// Weather forecast
 
@@ -87,6 +82,7 @@ $(document).ready(function(){
 			todaylist.splice(item,1);
 			$( "#" + item ).fadeOut( 500, function() {
 				reloadtodaylist();
+				reloadtomorrowlist();
 				toast('Task completed.', 5000, 'rounded');
 			});
 		});
@@ -105,6 +101,7 @@ $(document).ready(function(){
 				var task = document.getElementById("task").value;
 				todaylist.unshift(task);
 				reloadtodaylist();
+				reloadtomorrowlist();
 				document.getElementById("task").value = "";
 				$('#new').closeModal();
 				toast('Task added.', 5000, 'rounded');
@@ -137,7 +134,8 @@ $(document).ready(function(){
 				localStorage['lastname'] = document.getElementById("last_name").value;
 				localStorage['zip'] = document.getElementById("zip").value;
 				localStorage['setup'] = "completed";
-				localStorage["todaylist"] = '"This is a sample todaylist item.","You can delete these easily!"';
+				localStorage["todaylist"] = '"This is a sample todaylist item. You can delete these easily by tapping the Dismiss button.","Look what happens when you add a link! http://www.google.com/"';
+				localStorage["tomorrowlist"] = '';
 				location.reload();
 			}
 		});
