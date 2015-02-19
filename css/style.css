@@ -146,6 +146,11 @@ table, tr, th {
 	color: #3f51b5 !important;
 }
 
+#settings {
+	background: #3f51b5;
+	width: 100%;
+}
+
 #float {
   background: #3f51b5;
   position: absolute;
