@@ -19,8 +19,8 @@ body {
 		padding: 20px;
 		height: 64px;
 	}
-	#content {
-		margin: 75px auto 0px auto !important;
+	#content, #settings .collection {
+		margin: 76px auto 0px auto !important;
 	}
 }
 
@@ -77,11 +77,11 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 	background: #EEEEEE;
 }
 
-#main #content {
+#content {
 	padding-left: 10px;
 	padding-right: 10px;
 	max-width: 800px;
-	margin: 65px auto 0px auto;
+	margin: 66px auto 0px auto;
 }
 
 .title {
@@ -177,14 +177,16 @@ table, tr, th {
 }
 
 #settings #content {
-	max-width: 780px;
-	margin: 57px auto 0px auto;
+	
 }
 
 #settings .collection {
-	margin: 0 !important;
 	border: 0 !important;
 	background: transparent !important;
+	max-width: 790px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 56px auto 0px auto;
 }
 
 #settings input {
