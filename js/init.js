@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$('#setup').hide();
 	$('#main').hide();
 	$('#settings').hide();
-	$('#float').hide();
+	$('#add').hide();
 
 	// If setup is marked as complete
 	if (localStorage.getItem("setup") === "completed") {
@@ -62,11 +62,15 @@ $(document).ready(function(){
 		reloadtodaylist();
 		reloadtomorrowlist();
 
-		// Action for settings button click
+		// Action for settings buttons
 
 		$('#settings-trigger').click(function() {
+			$('#add').fadeOut( "slow", function() {});
 			$('#settings').fadeIn( "slow", function() {});
-			$('#float').fadeOut( "300", function() {});
+		});
+
+		$('#save-trigger').click(function() {
+			location.reload();
 		});
 
 		// Weather forecast
@@ -113,7 +117,7 @@ $(document).ready(function(){
 			});
 		});
 
-		$( "#float" ).click(function() {
+		$( "#add" ).click(function() {
 			$('#new').openModal();
 			$('#task').focus();
 		});
@@ -138,7 +142,7 @@ $(document).ready(function(){
 		$(window).load(function() {
 			$('.preloader-wrapper').fadeOut( "slow", function() {});
 			$('#main').fadeIn( "slow", function() {});
-			$('#float').fadeIn( "slow", function() {});
+			$('#add').fadeIn( "slow", function() {});
 		});
 
 	// If setup is not marked as complete
