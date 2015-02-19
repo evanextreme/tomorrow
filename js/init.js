@@ -62,6 +62,13 @@ $(document).ready(function(){
 		reloadtodaylist();
 		reloadtomorrowlist();
 
+		// Read values of settings from localStorage
+
+		document.getElementById("settings-firstname").value = localStorage['firstname'];
+		document.getElementById("settings-lastname").value = localStorage['lastname'];
+		document.getElementById("settings-zip").value = localStorage['zip'];
+		$("#settings-weather").attr('checked', localStorage['weather']);
+
 		// Action for settings buttons
 
 		$('#settings-trigger').click(function() {
@@ -163,6 +170,7 @@ $(document).ready(function(){
 				localStorage['firstname'] = document.getElementById("first_name").value;
 				localStorage['lastname'] = document.getElementById("last_name").value;
 				localStorage['zip'] = document.getElementById("zip").value;
+				localStorage["weather"] = 'true';
 				localStorage['setup'] = "completed";
 				localStorage["todaylist"] = '"This is a sample todaylist item. You can delete these easily by tapping the Dismiss button.","Look what happens when you add a link! http://www.google.com/"';
 				localStorage["tomorrowlist"] = '';
