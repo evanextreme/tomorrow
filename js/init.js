@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 	$('#setup').hide();
 	$('#main').hide();
+	$('#settings').hide();
 	$('#float').hide();
 
 	// If setup is marked as complete
@@ -60,6 +61,13 @@ $(document).ready(function(){
 
 		reloadtodaylist();
 		reloadtomorrowlist();
+
+		// Action for settings button click
+
+		$('#settings-trigger').click(function() {
+			$('#settings').fadeIn( "slow", function() {});
+			$('#float').fadeOut( "300", function() {});
+		});
 
 		// Weather forecast
 
