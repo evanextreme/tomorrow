@@ -68,7 +68,8 @@ $(document).ready(function(){
 		document.getElementById("settings-firstname").value = localStorage['firstname'];
 		document.getElementById("settings-lastname").value = localStorage['lastname'];
 		document.getElementById("settings-zip").value = localStorage['zip'];
-		$("#settings-weather").attr('checked', localStorage['weather']);
+		$("#settings-weather").prop('checked', JSON.parse(localStorage['weather']));
+		$("#settings-night").prop('checked', JSON.parse(localStorage['night']));
 
 		// Action for settings buttons
 
@@ -82,26 +83,38 @@ $(document).ready(function(){
 			localStorage['firstname'] = document.getElementById("settings-firstname").value;
 			localStorage['lastname'] = document.getElementById("settings-lastname").value;
 			localStorage['zip'] = document.getElementById("settings-zip").value;
+			if ($("#settings-weather").is(":checked")) {
+				localStorage['weather'] = "true";
+			} else {
+				localStorage['weather'] = "false";
+			}
+			if ($("#settings-night").is(":checked")) {
+				localStorage['night'] = "true";
+			} else {
+				localStorage['night'] = "false";
+			}
 			location.reload();
 		});
 
 		// Weather forecast
 
-		$.simpleWeather({
-		location: localStorage['zip'],
-		woeid: '',
-		unit: 'f',
-		success: function(weather) {
-			today = "<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's currently " + weather.temp + "&deg;" + weather.units.temp + " and " + weather.currently +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>";
-			$("#todaylist").prepend(today);
+		if (localStorage.getItem("weather") === "true") {
+			$.simpleWeather({
+			location: localStorage['zip'],
+			woeid: '',
+			unit: 'f',
+			success: function(weather) {
+				today = "<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's currently " + weather.temp + "&deg;" + weather.units.temp + " and " + weather.currently +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>";
+				$("#todaylist").prepend(today);
 
-			tomorrow = "<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.forecast[1].thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's going to be " + weather.forecast[1].low + "&deg;" + weather.units.temp + " - " + weather.forecast[1].high + "&deg;" + weather.units.temp + " and " + weather.forecast[1].text +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>";
-			$("#tomorrowlist").prepend(tomorrow);
-		},
-		error: function(error) {
-			toast('Error fetching the weather.', 3000, 'rounded');
+				tomorrow = "<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.forecast[1].thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's going to be " + weather.forecast[1].low + "&deg;" + weather.units.temp + " - " + weather.forecast[1].high + "&deg;" + weather.units.temp + " and " + weather.forecast[1].text +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>";
+				$("#tomorrowlist").prepend(tomorrow);
+			},
+			error: function(error) {
+				toast('Error fetching the weather.', 3000, 'rounded');
+			}
+			});
 		}
-		});
 
 		$(document).on('click', ".delete", function() {
 			var item = $(this).parent().parent().parent().attr('id');
