@@ -37,7 +37,7 @@
 	<div id="todaylist"></div>
 	<div class="title">Tomorrow</div>
 	<div id="tomorrowlist"></div>
-	<a href="#" id="settings-trigger" class="btn-large waves-effect waves-light lighten-1">Settings</a>
+	<a id="settings-trigger" class="btn-large waves-effect waves-light lighten-1">Settings</a>
 	</div>
 
 </div>
@@ -86,11 +86,17 @@
 	</nav>
 
 	<div id="content">
-		<p>settings go here eventually</p>
+		<ul class="collection">
+			<li class="collection-item"><div>First Name<a href="#!" class="secondary-content"><input id="first_name" type="text"></a></div></li>
+			<li class="collection-item"><div>Last Name<a href="#!" class="secondary-content"><input id="last_name" type="text"></a></div></li>
+			<li class="collection-item"><div>Zip Code<a href="#!" class="secondary-content"><input id="zip" type="text"></a></div></li>
+			<li class="collection-item"><div>Enable weather cards<a href="#!" class="secondary-content"><div class="switch"><label>Off<input type="checkbox"><span class="lever"></span>On</label></div></a></div></li>
+			<li class="collection-item"><div id="save-trigger">Save settings</div></li>
+		</ul>
 	</div>
 </div>
 
-<a id="float" class="btn-floating btn-large waves-effect waves-light"><i class="mdi-content-add"></i></a>
+<a id="add" class="btn-floating btn-large waves-effect waves-light"><i class="mdi-content-add"></i></a>
 
 <div class="preloader-wrapper big active">
 	<div class="spinner-layer spinner-blue">
