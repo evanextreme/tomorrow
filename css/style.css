@@ -49,6 +49,7 @@ body {
 nav {
   position: fixed;
   z-index: 1;
+  background: #3f51b5;
 }
 
 #toast-container {
