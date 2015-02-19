@@ -4,6 +4,7 @@ $(document).ready(function(){
 	$('#main').hide();
 	$('#settings').hide();
 	$('#add').hide();
+	$('#save-trigger').hide();
 
 	// If setup is marked as complete
 	if (localStorage.getItem("setup") === "completed") {
@@ -74,9 +75,13 @@ $(document).ready(function(){
 		$('#settings-trigger').click(function() {
 			$('#add').fadeOut( "slow", function() {});
 			$('#settings').fadeIn( "slow", function() {});
+			$('#save-trigger').fadeIn( "slow", function() {});
 		});
 
 		$('#save-trigger').click(function() {
+			localStorage['firstname'] = document.getElementById("settings-firstname").value;
+			localStorage['lastname'] = document.getElementById("settings-lastname").value;
+			localStorage['zip'] = document.getElementById("settings-zip").value;
 			location.reload();
 		});
 
