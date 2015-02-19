@@ -23,7 +23,7 @@ $(document).ready(function(){
 			if($('#todaylist').length > 0) {
 				$("#todaylist").empty();
 				if(todaylist.length === 0){
-					$("#todaylist").append('<div class="card"><div class="card-content"><p><i>Theres nothing here! Add a todaylist item by pressing the Add button in the lower-right corner of the screen.</i></p></div></div>');
+					$("#todaylist").append('<div class="card"><div class="card-content"><p><i>Theres nothing here! Add an item by pressing the Add button in the lower-right corner of the screen.</i></p></div></div>');
 				} else {
 					for (var i = 0; i < todaylist.length; ++i) {
 						$( "#todaylist" ).append('<div id="' + i + '" class="card"><div class="card-content"><div class="task task' + i + '">' + todaylist[i] + '</div><div class="actions actions' + i + '"><a class="waves-effect waves-green btn-flat delete">Dismiss</a><a class="waves-effect waves-green btn-flat push">Push</a></div></div></div>');
