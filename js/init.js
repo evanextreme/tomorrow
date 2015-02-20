@@ -174,10 +174,11 @@ $(document).ready(function(){
 
 			if (localStorage.getItem("night") === "true") {
 				$(".navbar").css("background", "#151515", 'important');
-				$("#add").css("background", "#151515", 'important');
+				$("#add").css("background", "#424242", 'important');
 				$("#settings-trigger").css("background", "#151515", 'important');
-				$("#save-trigger").css("background", "#151515", 'important');
+				$("#save-trigger").css("background", "#424242", 'important');
 				$("#settings").css("background", "#000000", 'important');
+				$(".modal").css("background", "#424242", 'important');
 				$(".collection-item").css("border-bottom", "#151515", 'important');
 				$("#main").css("background", "#000000", 'important');
 				$(".card").css("background", "#151515", 'important');
