@@ -212,6 +212,7 @@ $(document).ready(function(){
 				localStorage['setup'] = "completed";
 				localStorage["todaylist"] = '"This is a sample todaylist item. You can delete these easily by tapping the Dismiss button.","Look what happens when you add a link! http://www.google.com/"';
 				localStorage["tomorrowlist"] = '';
+				localStorage['night'] = "false";
 				location.reload();
 			}
 		});
