@@ -38,6 +38,7 @@ $(document).ready(function(){
 				}
 			}
 			todaylist = JSON.parse("[" + localStorage["todaylist"] + "]");
+			if (localStorage.getItem("night") === "true") { $(".card").css("background", "#151515", 'important'); }
 		}
 
 		function reloadtomorrowlist() {
@@ -58,6 +59,7 @@ $(document).ready(function(){
 				}
 			}
 			tomorrowlist = JSON.parse("[" + localStorage["tomorrowlist"] + "]");
+			if (localStorage.getItem("night") === "true") { $(".card").css("background", "#151515", 'important'); }
 		}
 
 		reloadtodaylist();
@@ -123,6 +125,7 @@ $(document).ready(function(){
 				reloadtodaylist();
 				reloadtomorrowlist();
 				toast('Task completed.', 3000, 'rounded');
+				$(".card").css("background", "#151515", 'important');
 			});
 		});
 
@@ -138,6 +141,7 @@ $(document).ready(function(){
 					reloadtodaylist();
 					reloadtomorrowlist();
 					toast('Task pushed to tomorrow.', 3000, 'rounded');
+					$(".card").css("background", "#151515", 'important');
 				});
 			});
 		});
@@ -210,7 +214,7 @@ $(document).ready(function(){
 				localStorage['zip'] = document.getElementById("zip").value;
 				localStorage["weather"] = 'true';
 				localStorage['setup'] = "completed";
-				localStorage["todaylist"] = '"This is a sample todaylist item. You can delete these easily by tapping the Dismiss button.","Look what happens when you add a link! http://www.google.com/"';
+				localStorage["todaylist"] = '"This is a sample list item. You can delete these easily by tapping the Dismiss button.","Look what happens when you add a link! http://www.google.com/"';
 				localStorage["tomorrowlist"] = '';
 				localStorage['night'] = "false";
 				location.reload();
