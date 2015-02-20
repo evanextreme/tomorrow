@@ -135,7 +135,6 @@ $(document).ready(function(){
 			$( ".confirm-ok" ).click(function() {
 				todaylist.splice(item,1);
 				tomorrowlist.unshift(task);
-				console.log(tomorrowlist);
 				$( "#todaylist > #" + item ).fadeOut( 500, function() {
 					reloadtodaylist();
 					reloadtomorrowlist();
@@ -221,7 +220,8 @@ $(document).ready(function(){
 		});
 
 	} else {
-		console.log("insert error message here or whatver");
+		localStorage["setup"] = "";
+		location.reload();
 	}
 
 });
