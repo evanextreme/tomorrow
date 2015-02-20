@@ -170,15 +170,15 @@ $(document).ready(function(){
 			// Night mode
 
 			if (localStorage.getItem("night") === "true") {
-				$(".navbar").css("background", "#151515", 'important');
+				$(".navbar").css("background", "#212121", 'important');
 				$("#add").css("background", "#424242", 'important');
-				$("#settings-trigger").css("background", "#151515", 'important');
+				$("#settings-trigger").css("background", "#212121", 'important');
 				$("#save-trigger").css("background", "#424242", 'important');
 				$("#settings").css("background", "#000000", 'important');
 				$(".modal").css("background", "#424242", 'important');
 				$(".collection-item").css("border-bottom", "#151515", 'important');
 				$("#main").css("background", "#000000", 'important');
-				$(".card").css("background", "#151515", 'important');
+				$(".card").css("background", "#212121", 'important');
 				$(".switch label input[type=checkbox]:first-child:checked+.lever").css("background", "#151515", 'important');
 				$("body").css("color", "#FFFFFF", 'important');
 				$("a").css("color", "#FFFFFF", 'important');
