@@ -125,7 +125,6 @@ $(document).ready(function(){
 				reloadtodaylist();
 				reloadtomorrowlist();
 				toast('Task completed.', 3000, 'rounded');
-				$(".card").css("background", "#151515", 'important');
 			});
 		});
 
@@ -141,7 +140,6 @@ $(document).ready(function(){
 					reloadtodaylist();
 					reloadtomorrowlist();
 					toast('Task pushed to tomorrow.', 3000, 'rounded');
-					$(".card").css("background", "#151515", 'important');
 				});
 			});
 		});
