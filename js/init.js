@@ -14,13 +14,45 @@ $(document).ready(function(){
 		var todaylist = JSON.parse("[" + localStorage["todaylist"] + "]");
 		var tomorrowlist = JSON.parse("[" + localStorage["tomorrowlist"] + "]");
 
-		function reloadtodaylist() {
-			var temp = "";
-			for (var i = 0; i < todaylist.length; ++i) {
-				temp += '"' + todaylist[i] + '",';
+		// Weather forecast
+		if (localStorage.getItem("weather") === "true") {
+
+			//var todayweather;
+			//var tomorrowweather;
+
+			$.simpleWeather({
+			location: localStorage['zip'],
+			woeid: '',
+			unit: 'f',
+			success: function(weather) {
+				todayweather = "<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's currently " + weather.temp + "&deg;" + weather.units.temp + " and " + weather.currently +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>";
+				$("#todaylist").prepend(todayweather);
+
+				tomorrowweather = "<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.forecast[1].thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's going to be " + weather.forecast[1].low + "&deg;" + weather.units.temp + " - " + weather.forecast[1].high + "&deg;" + weather.units.temp + " and " + weather.forecast[1].text +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>";
+				$("#tomorrowlist").prepend(tomorrowweather);
+			},
+			error: function(error) {
+				toast('Error fetching the weather.', 3000, 'rounded');
 			}
-			temp = temp.substring(0, temp.length - 1); // Cut off last comma
-			localStorage["todaylist"] = temp;
+			});
+		}
+
+		// Reload everything after changes
+
+		function reloadData() {
+
+			var todaytemp = "";
+			for (var i = 0; i < todaylist.length; ++i) {
+				todaytemp += '"' + todaylist[i] + '",';
+			}
+			var tomorrowtemp = "";
+			for (var i = 0; i < tomorrowlist.length; ++i) {
+				tomorrowtemp += '"' + tomorrowlist[i] + '",';
+			}
+			todaytemp = todaytemp.substring(0, todaytemp.length - 1); // Cut off last comma
+			tomorrowtemp = tomorrowtemp.substring(0, tomorrowtemp.length - 1); // Cut off last comma
+			localStorage["todaylist"] = todaytemp;
+			localStorage["tomorrowlist"] = tomorrowtemp;
 			var url = new RegExp(/(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim);
 			if($('#todaylist').length > 0) {
 				$("#todaylist").empty();
@@ -37,17 +69,6 @@ $(document).ready(function(){
 					}
 				}
 			}
-			todaylist = JSON.parse("[" + localStorage["todaylist"] + "]");
-			if (localStorage.getItem("night") === "true") { $(".card").css("background", "#151515", 'important'); }
-		}
-
-		function reloadtomorrowlist() {
-			var temp = "";
-			for (var i = 0; i < tomorrowlist.length; ++i) {
-				temp += '"' + tomorrowlist[i] + '",';
-			}
-			temp = temp.substring(0, temp.length - 1); // Cut off last comma
-			localStorage["tomorrowlist"] = temp;
 			if($('#tomorrowlist').length > 0) {
 				$("#tomorrowlist").empty();
 				if(tomorrowlist.length === 0){
@@ -58,12 +79,14 @@ $(document).ready(function(){
 					}
 				}
 			}
+			todaylist = JSON.parse("[" + localStorage["todaylist"] + "]");
 			tomorrowlist = JSON.parse("[" + localStorage["tomorrowlist"] + "]");
+
+			// Fix for night mode not applying to reloaded cards
 			if (localStorage.getItem("night") === "true") { $(".card").css("background", "#151515", 'important'); }
 		}
 
-		reloadtodaylist();
-		reloadtomorrowlist();
+		reloadData();
 
 		// Read values of settings from localStorage
 
@@ -98,32 +121,11 @@ $(document).ready(function(){
 			location.reload();
 		});
 
-		// Weather forecast
-
-		if (localStorage.getItem("weather") === "true") {
-			$.simpleWeather({
-			location: localStorage['zip'],
-			woeid: '',
-			unit: 'f',
-			success: function(weather) {
-				today = "<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's currently " + weather.temp + "&deg;" + weather.units.temp + " and " + weather.currently +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>";
-				$("#todaylist").prepend(today);
-
-				tomorrow = "<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.forecast[1].thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's going to be " + weather.forecast[1].low + "&deg;" + weather.units.temp + " - " + weather.forecast[1].high + "&deg;" + weather.units.temp + " and " + weather.forecast[1].text +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>";
-				$("#tomorrowlist").prepend(tomorrow);
-			},
-			error: function(error) {
-				toast('Error fetching the weather.', 3000, 'rounded');
-			}
-			});
-		}
-
 		$(document).on('click', ".delete", function() {
 			var item = $(this).parent().parent().parent().attr('id');
 			todaylist.splice(item,1);
 			$( "#" + item ).fadeOut( 500, function() {
-				reloadtodaylist();
-				reloadtomorrowlist();
+				reloadData();
 				toast('Task completed.', 3000, 'rounded');
 			});
 		});
@@ -136,8 +138,7 @@ $(document).ready(function(){
 				todaylist.splice(item,1);
 				tomorrowlist.unshift(task);
 				$( "#todaylist > #" + item ).fadeOut( 500, function() {
-					reloadtodaylist();
-					reloadtomorrowlist();
+					reloadData();
 					toast('Task pushed to tomorrow.', 3000, 'rounded');
 				});
 			});
@@ -156,8 +157,7 @@ $(document).ready(function(){
 			} else {
 				var task = document.getElementById("task").value;
 				todaylist.unshift(task);
-				reloadtodaylist();
-				reloadtomorrowlist();
+				reloadData();
 				document.getElementById("task").value = "";
 				$('#new').closeModal();
 				toast('Task added.', 3000, 'rounded');
