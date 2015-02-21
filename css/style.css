@@ -110,7 +110,7 @@ table, tr, th {
 	margin-bottom: 10px;
 }
 
-#tomorrowlist .card {
+#tomorrowlist .card, #tomorrow-weather .card {
 	background: #D3D3D3;
 	color: #7e7e7e;
 }

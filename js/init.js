@@ -15,26 +15,22 @@ $(document).ready(function(){
 		var tomorrowlist = JSON.parse("[" + localStorage["tomorrowlist"] + "]");
 
 		// Weather forecast
-		if (localStorage.getItem("weather") === "true") {
 
-			//var todayweather;
-			//var tomorrowweather;
+		if (localStorage.getItem("weather") === "true") {
 
 			$.simpleWeather({
 			location: localStorage['zip'],
 			woeid: '',
 			unit: 'f',
 			success: function(weather) {
-				todayweather = "<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's currently " + weather.temp + "&deg;" + weather.units.temp + " and " + weather.currently +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>";
-				$("#todaylist").prepend(todayweather);
-
-				tomorrowweather = "<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.forecast[1].thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's going to be " + weather.forecast[1].low + "&deg;" + weather.units.temp + " - " + weather.forecast[1].high + "&deg;" + weather.units.temp + " and " + weather.forecast[1].text +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>";
-				$("#tomorrowlist").prepend(tomorrowweather);
+				$("#today-weather").append("<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's currently " + weather.temp + "&deg;" + weather.units.temp + " and " + weather.currently +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>");
+				$("#tomorrow-weather").append("<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.forecast[1].thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's going to be " + weather.forecast[1].low + "&deg;" + weather.units.temp + " - " + weather.forecast[1].high + "&deg;" + weather.units.temp + " and " + weather.forecast[1].text +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>");
 			},
 			error: function(error) {
 				toast('Error fetching the weather.', 3000, 'rounded');
 			}
 			});
+
 		}
 
 		// Reload everything after changes
