@@ -14,6 +14,21 @@ $(document).ready(function(){
 		var todaylist = JSON.parse("[" + localStorage["todaylist"] + "]");
 		var tomorrowlist = JSON.parse("[" + localStorage["tomorrowlist"] + "]");
 
+		// Find date
+
+		var d = new Date();
+		var month = d.getMonth()+1;
+		var day = d.getDate();
+		var date = d.getFullYear() + (month<10 ? '0' : '') + month + (day<10 ? '0' : '') + day;
+		if (localStorage.getItem("lastopened") === null || localStorage.getItem("lastopened") === "") {
+			localStorage["lastopened"] = date;
+		}
+		if (localStorage.getItem("lastopened") != date) {
+			todaylist = tomorrowlist;
+			tomorrowlist = JSON.parse("[]");
+			localStorage["lastopened"] = date;
+		}
+
 		// Weather forecast
 
 		if (localStorage.getItem("weather") === "true") {
