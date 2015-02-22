@@ -109,28 +109,3 @@ table, tr, th {
   bottom: 10px;
   z-index: 1;
 }
-
-/* Styles for Setup */
-
-#setup {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	background: #000000 url(../img/bg.jpg) no-repeat center fixed;
-	z-index: 1;
-	overflow: auto;
-}
-
-#setup nav {
-    background: rgb(0, 0, 0) transparent;
-    background: rgba(0, 0, 0, 0.6);
-    color: #FFFFFF;
-}
-
-#setup > div {
-	padding: 20px;
-	max-width: 800px;
-	margin: 56px auto 0px auto;
-}
