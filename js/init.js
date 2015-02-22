@@ -106,9 +106,9 @@ $(document).ready(function(){
 
 		// Read values of settings from localStorage
 
-		document.getElementById("settings-firstname").value = localStorage['firstname'];
-		document.getElementById("settings-lastname").value = localStorage['lastname'];
-		document.getElementById("settings-zip").value = localStorage['zip'];
+		$("#settings-firstname").val(localStorage['firstname']);
+		$("#settings-lastname").val(localStorage['lastname']);
+		$("#settings-zip").val(localStorage['zip']);
 		$("#settings-weather").prop('checked', JSON.parse(localStorage['weather']));
 		$("#settings-night").prop('checked', JSON.parse(localStorage['night']));
 
@@ -123,9 +123,9 @@ $(document).ready(function(){
 		// Actions for save button
 
 		$('#save-trigger').click(function() {
-			localStorage['firstname'] = document.getElementById("settings-firstname").value;
-			localStorage['lastname'] = document.getElementById("settings-lastname").value;
-			localStorage['zip'] = document.getElementById("settings-zip").value;
+			localStorage['firstname'] = $("#settings-firstname").val();
+			localStorage['lastname'] = $("#settings-lastname").val();
+			localStorage['zip'] = $("#settings-zip").val();
 			if ($("#settings-weather").is(":checked")) {
 				localStorage['weather'] = "true";
 			} else {
