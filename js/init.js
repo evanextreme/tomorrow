@@ -123,20 +123,26 @@ $(document).ready(function(){
 		// Actions for save button
 
 		$('#save-trigger').click(function() {
-			localStorage['firstname'] = $("#settings-firstname").val();
-			localStorage['lastname'] = $("#settings-lastname").val();
-			localStorage['zip'] = $("#settings-zip").val();
-			if ($("#settings-weather").is(":checked")) {
-				localStorage['weather'] = "true";
+			if( ($("#settings-firstname").val() == 0) || ($("#settings-lastname").val() == 0) || ($("#settings-zip").val() == 0) )
+			{
+				// Tell user to fill out everything
+				toast('Fill out everything before saving!', 3000, 'rounded');
 			} else {
-				localStorage['weather'] = "false";
+				localStorage['firstname'] = $("#settings-firstname").val();
+				localStorage['lastname'] = $("#settings-lastname").val();
+				localStorage['zip'] = $("#settings-zip").val();
+				if ($("#settings-weather").is(":checked")) {
+					localStorage['weather'] = "true";
+				} else {
+					localStorage['weather'] = "false";
+				}
+				if ($("#settings-night").is(":checked")) {
+					localStorage['night'] = "true";
+				} else {
+					localStorage['night'] = "false";
+				}
+				location.reload();
 			}
-			if ($("#settings-night").is(":checked")) {
-				localStorage['night'] = "true";
-			} else {
-				localStorage['night'] = "false";
-			}
-			location.reload();
 		});
 
 		// Actions for dismiss button
@@ -230,7 +236,7 @@ $(document).ready(function(){
 		// Actions when 'Get Started' button is pressed on setup
 		$('#getstarted').click(function() {
 				// Test if any of the text fields are empty
-			if( (document.getElementById("first_name").value == 0) || (document.getElementById("last_name").value == 0) || (document.getElementById("zip").value == 0) )
+			if( ($("#setup-firstname").val() == 0) || ($("#setup-lastname").val() == 0) || ($("#setup-zip").val() == 0) )
 			{
 				// Tell user to fill out everything
 				toast('Fill out everything and try again!', 3000, 'rounded');
