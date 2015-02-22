@@ -236,13 +236,13 @@ $(document).ready(function(){
 				toast('Fill out everything and try again!', 3000, 'rounded');
 			} else {
 				// Save contents of text fields to localStorage
-				localStorage['firstname'] = document.getElementById("first_name").value;
-				localStorage['lastname'] = document.getElementById("last_name").value;
-				localStorage['zip'] = document.getElementById("zip").value;
-				localStorage["weather"] = 'true';
+				localStorage['firstname'] = $("#setup-firstname").val();
+				localStorage['lastname'] = $("#setup-lastname").val();
+				localStorage['zip'] = $("#setup-zip").val();
+				localStorage["weather"] = "true";
 				localStorage['setup'] = "completed";
 				localStorage["todaylist"] = '"This is a sample list item. You can delete these easily by tapping the Dismiss button.","Look what happens when you add a link! http://www.google.com/"';
-				localStorage["tomorrowlist"] = '';
+				localStorage["tomorrowlist"] = "";
 				localStorage['night'] = "false";
 				location.reload();
 			}
