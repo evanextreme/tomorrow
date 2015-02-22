@@ -99,7 +99,10 @@ $(document).ready(function(){
 			tomorrowlist = JSON.parse("[" + localStorage["tomorrowlist"] + "]");
 
 			// Fix for night mode not applying to reloaded cards
-			if (localStorage.getItem("night") === "true") { $(".card").css("background", "#151515", 'important'); }
+			if (localStorage.getItem("night") === "true") {
+				$(".card").css("background", "#151515", 'important');
+				$("a").css("color", "#FFFFFF", 'important');
+			}
 		}
 
 		reloadData();
