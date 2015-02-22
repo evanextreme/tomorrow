@@ -166,6 +166,10 @@ table, tr, th {
 	background: none !important;
 }
 
+p {
+	margin-bottom: 10px !important;
+}
+
 /* Styles for Settings */
 
 #settings {
@@ -212,19 +216,23 @@ table, tr, th {
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
-	background: #000000 url(../img/bg.jpg) no-repeat center fixed;
+	background: #3f51b5;
 	z-index: 1;
 	overflow: auto;
 }
 
-#setup nav {
-    background: rgb(0, 0, 0) transparent;
-    background: rgba(0, 0, 0, 0.6);
-    color: #FFFFFF;
+#getstarted {
+	background: #FFFFFF;
+	color: #000000;
+	width: 100%;
 }
 
-#setup > div {
-	padding: 20px;
+#setup nav {
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+#setup #content {
 	max-width: 800px;
-	margin: 56px auto 0px auto;
+	margin: 66px auto 0px auto;
 }
