@@ -50,6 +50,7 @@ $(document).ready(function(){
 			localStorage["todaylist"] = todaytemp;
 			localStorage["tomorrowlist"] = tomorrowtemp;
 			var url = new RegExp(/(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim);
+			// Generate today list
 			if($('#todaylist').length > 0) {
 				$("#todaylist").empty();
 				if(todaylist.length === 0){
@@ -65,6 +66,7 @@ $(document).ready(function(){
 					}
 				}
 			}
+			// Generate tomorrow list
 			if($('#tomorrowlist').length > 0) {
 				$("#tomorrowlist").empty();
 				if(tomorrowlist.length === 0){
@@ -75,6 +77,8 @@ $(document).ready(function(){
 					}
 				}
 			}
+
+			// Reload variables from updated localStorage sources
 			todaylist = JSON.parse("[" + localStorage["todaylist"] + "]");
 			tomorrowlist = JSON.parse("[" + localStorage["tomorrowlist"] + "]");
 
@@ -92,13 +96,15 @@ $(document).ready(function(){
 		$("#settings-weather").prop('checked', JSON.parse(localStorage['weather']));
 		$("#settings-night").prop('checked', JSON.parse(localStorage['night']));
 
-		// Action for settings buttons
+		// Actions for settings buttons
 
 		$('#settings-trigger').click(function() {
 			$('#add').fadeOut( "slow", function() {});
 			$('#settings').fadeIn( "slow", function() {});
 			$('#save-trigger').fadeIn( "slow", function() {});
 		});
+
+		// Actions for save button
 
 		$('#save-trigger').click(function() {
 			localStorage['firstname'] = document.getElementById("settings-firstname").value;
@@ -117,6 +123,8 @@ $(document).ready(function(){
 			location.reload();
 		});
 
+		// Actions for dismiss button
+
 		$(document).on('click', ".delete", function() {
 			var item = $(this).parent().parent().parent().attr('id');
 			todaylist.splice(item,1);
@@ -125,6 +133,8 @@ $(document).ready(function(){
 				toast('Task completed.', 3000, 'rounded');
 			});
 		});
+
+		// Actions for push button
 
 		$(document).on('click', ".push", function() {
 			var item = $(this).parent().parent().parent().attr('id');
@@ -140,10 +150,14 @@ $(document).ready(function(){
 			});
 		});
 
+		// Actions for floating add button
+
 		$( "#add" ).click(function() {
 			$('#new').openModal();
 			$('#task').focus();
 		});
+
+		// Actions for ENTER keypress in add modal
 
 		$('#task').keypress(function(event){
 		 var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -161,10 +175,11 @@ $(document).ready(function(){
 		 }
 		});
 
+		// Actions to do after everything is finished loading
+
 		$(window).load(function() {
 
 			// Night mode
-
 			if (localStorage.getItem("night") === "true") {
 				$(".navbar").css("background", "#212121", 'important');
 				$("#add").css("background", "#424242", 'important');
@@ -182,10 +197,10 @@ $(document).ready(function(){
 			}
 
 			// Show everything
-
 			$('.preloader-wrapper').fadeOut( "slow", function() {});
 			$('#main').fadeIn( "slow", function() {});
 			$('#add').fadeIn( "slow", function() {});
+
 		});
 
 	// If setup is not marked as complete
@@ -216,6 +231,7 @@ $(document).ready(function(){
 		});
 
 	} else {
+		
 		localStorage["setup"] = "";
 		location.reload();
 	}
