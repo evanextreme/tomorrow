@@ -66,6 +66,7 @@ $(document).ready(function(){
 					}
 				}
 			}
+
 			// Generate tomorrow list
 			if($('#tomorrowlist').length > 0) {
 				$("#tomorrowlist").empty();
@@ -73,7 +74,7 @@ $(document).ready(function(){
 					$("#tomorrowlist").append('<div class="card"><div class="card-content"><i>This is where your items pushed to tomorrow appear.</i></div></div>');
 				} else {
 					for (var i = 0; i < tomorrowlist.length; ++i) {
-						$( "#tomorrowlist" ).append('<div id="' + i + '" class="card"><div class="card-content"><div class="task">' + tomorrowlist[i] + '</div></div></div>');
+						$( "#tomorrowlist" ).append('<div class="card"><div class="card-content">' + tomorrowlist[i] + '</div></div>');
 					}
 				}
 			}
@@ -127,6 +128,7 @@ $(document).ready(function(){
 
 		$(document).on('click', ".delete", function() {
 			var item = $(this).parent().parent().parent().attr('id');
+			// Remove item from today list
 			todaylist.splice(item,1);
 			$( "#" + item ).fadeOut( 500, function() {
 				reloadData();
@@ -139,14 +141,14 @@ $(document).ready(function(){
 		$(document).on('click', ".push", function() {
 			var item = $(this).parent().parent().parent().attr('id');
 			var task = $( ".task" + item ).text();
-			$('#confirm').openModal();
-			$( ".confirm-ok" ).click(function() {
-				todaylist.splice(item,1);
-				tomorrowlist.unshift(task);
-				$( "#todaylist > #" + item ).fadeOut( 500, function() {
-					reloadData();
-					toast('Task pushed to tomorrow.', 3000, 'rounded');
-				});
+			console.log("item: " + item);
+			console.log("task: " + task);
+			todaylist.splice(item,1); // Remove item from today list
+			tomorrowlist.unshift(task); // Add item to tomorrow list
+			$( "#" + item ).fadeOut( 500, function() {
+				$('#confirm').closeModal();
+				reloadData();
+				toast('Task pushed to tomorrow.', 3000, 'rounded');
 			});
 		});
 
@@ -166,6 +168,7 @@ $(document).ready(function(){
 				toast('Enter a task!', 3000, 'rounded');
 			} else {
 				var task = document.getElementById("task").value;
+				// Add item to today list
 				todaylist.unshift(task);
 				reloadData();
 				document.getElementById("task").value = "";
@@ -231,7 +234,7 @@ $(document).ready(function(){
 		});
 
 	} else {
-		
+
 		localStorage["setup"] = "";
 		location.reload();
 	}
