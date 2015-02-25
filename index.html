@@ -6,7 +6,6 @@
 	<title>Tomorrow</title>
 	<script src="jquery-2.1.3.min.js"></script>
 	<script src="js/materialize.min.js"></script>
-	<script src="js/weather.js"></script>
 	<link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png">
@@ -27,138 +26,111 @@
 	<meta name="msapplication-TileColor" content="#3f51b5">
 	<meta name="msapplication-TileImage" content="mstile-144x144.png">
 	<meta name="msapplication-config" content="browserconfig.xml">
-	<meta name="theme-color" content="#3f51b5">
+	<meta name="theme-color" content="#FFFFFF">
 </head>
 <body>
+ <nav class="white" role="navigation">
+		<div class="container">
+			<div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">
+				<img class="responsive-img" src="img/logo.png">
+			</a>
+				<ul id="nav-mobile" class="right side-nav">
+					<li><a href="tomorrow.html">List</a></li>
+					<li><a href="settings.html">Settings</a></li>
+					<li><a href="about.html">About</a></li>
 
-<div id="new" class="modal">
-	<p>Type in a new task, and press Enter on your keyboard to add it.</p>
-	<p><input id="task" type="text" placeholder="Type in a task here..."></p>
-	<p><input type="checkbox" id="new-toggle"><label for="new-toggle">Push to tomorrow</label></p>
-</div>
-
-<div id="main">
-
-	<nav class="navbar">
-		<div class="nav-wrapper">
-			<a id="logo-container" href="#" class="brand-logo"><img class="responsive-img" src="img/logowhite.png"></a>
-		</div>
-	</nav>
-
-	<div id="content">
-	<div class="title">Today</div>
-	<div id="today-weather"></div>
-	<div id="todaylist"></div>
-	<div class="title">Tomorrow</div>
-	<div id="tomorrow-weather"></div>
-	<div id="tomorrowlist"></div>
-	<a id="settings-trigger" class="btn-large waves-effect waves-light lighten-1">Settings</a>
-	</div>
-
-</div>
-
-<div id="setup">
-
-	<nav class="navbar">
-		<div class="nav-wrapper">
-			<a id="logo-container" href="#" class="brand-logo"><img class="responsive-img" src="img/logowhite.png"></a>
-		</div>
-	</nav>
-
-	<div id="content">
-		<div class="card">
-			<div class="card-content">
-				<span class="card-title">Welcome</span>
-				<p>Tomorrow is an intelligent daily planner, designed to be simple and elegant.</p>
-				<p>Instead of thinking about your life far in the future, take a few steps back, and think about only the day ahead of you.</p>
+				</ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 			</div>
 		</div>
-		<div class="card">
-			<div class="card-content">
-				<span class="card-title">Let us get to know you</span>
-				<p>Give Tomorrow some basic info so we can personalize your experience.</p>
-				<div class="row">
-					<div class="input-field col s6">
-						<input id="setup-firstname" type="text" class="validate">
-						<label for="setup-firstname">First Name</label>
+	</nav>
+
+	<div id="index-banner" class="parallax-container">
+		<div class="section no-pad-bot">
+			<div class="container">
+				<br><br>
+				<h1 class="header center white-text text-lighten-2">Stop Worrying</h1>
+				<div class="row center">
+					<h5 class="header col s12 light white-text">The daily planner that is designed for everyday people who want to get things done and stop worrying about tomorrow.</h5>
+				</div>
+				<div class="row center">
+						<a class="disabled waves-effect indigo btn tooltipped" data-position="bottom" data-delay="50" data-tooltip="Coming soon!">Android</a>
+						<a class="waves-effect waves-light indigo btn" href="app/index.html">Web</a>
+						<a class="disabled waves-effect indigo btn tooltipped" data-position="bottom" data-delay="50" data-tooltip="Coming soon!">Chrome</a>
+				</div>
+				<br><br>
+
+			</div>
+		</div>
+		<div class="parallax"><img src="img/bg.jpg" alt="Unsplashed background img 2"></div>
+	</div>
+
+
+	<div class="container">
+		<div class="section">
+			<div class="row">
+				<div class="col s12 m4">
+					<div class="icon-block">
+						<h2 class="center indigo-text"><i class="mdi-content-send"></i></h2>
+						<h5 class="center">Fast and light</h5>
+
+						<p class="light">Tomorrow is built using the latest in web and mobile technology. Our Android app is specifically designed to use minimal resources and battery, and our web version is designed to run on even the oldest of computers, while still feeling snappy and responsive. We are available wherever you are, to help you get whatever you need done.</p>
 					</div>
-					<div class="input-field col s6">
-						<input id="setup-lastname" type="text" class="validate">
-						<label for="setup-lastname">Last Name</label>
+				</div>
+
+				<div class="col s12 m4">
+					<div class="icon-block">
+						<h2 class="center indigo-text"><i class="mdi-social-people"></i></h2>
+						<h5 class="center">Built for humans</h5>
+
+						<p class="light">No one wants to use a planer that is deigned for robots. So why do we insist on doing so? We designed our planner to elminate stress by only letting you plan tasks for Tomorrow. Soon we will include automatic reminders throughout the day so that you don't need to plan your life around tasks, but so that you can plan tasks around your life.</p>
 					</div>
-					<div class="input-field col s12">
-						<input id="setup-zip" type="text" class="validate">
-						<label for="setup-zip">City or ZIP Code</label>
+				</div>
+
+				<div class="col s12 m4">
+					<div class="icon-block">
+						<h2 class="center indigo-text"><i class="mdi-action-settings"></i></h2>
+						<h5 class="center">Productivity focused</h5>
+
+						<p class="light">Tomorrow is designed to make sure you get everything that you need to do out of the way, so you can live your life. We have built the app to place your productivity first and foremost, and we have noticed that our app signifigantly increases productivity when used versus similar applications.</p>
 					</div>
 				</div>
 			</div>
+
 		</div>
-		<a href="#" id="getstarted" class="btn-large waves-effect waves-dark">Get Started</a>
 	</div>
 
-</div>
+	<footer class="page-footer indigo">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Company Bio</h5>
+					<p class="grey-text text-lighten-4">WorldNine is a company whose mission is to build smart products designed for the world of the future.</p>
 
-<div id="settings">
-	<nav class="navbar">
-		<div class="nav-wrapper">
-			<a id="logo-container" href="#" class="brand-logo"><img class="responsive-img" src="img/logowhite.png"></a>
+
+				</div>
+				<div class="col l3 s12">
+					<h5 class="white-text">Connect</h5>
+					<ul>
+						<li><a class="white-text" href="http://www.worldnine.co/#about">About</a></li>
+						<li><a class="white-text" href="http://www.worldnine.co/#products">Products</a></li>
+						<li><a class="white-text" href="http://www.worldnine.co/#contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
-	</nav>
-	<ul class="collection">
-		<li class="collection-item"><div>First Name<a href="#!" class="secondary-content"><input id="settings-firstname" type="text"></a></div></li>
-		<li class="collection-item"><div>Last Name<a href="#!" class="secondary-content"><input id="settings-lastname" type="text"></a></div></li>
-		<li class="collection-item"><div>Zip Code<a href="#!" class="secondary-content"><input id="settings-zip" type="text"></a></div></li>
-		<li class="collection-item"><div>Enable weather cards<a href="#!" class="secondary-content"><div class="switch"><label>Off<input type="checkbox" id="settings-weather"><span class="lever"></span>On</label></div></a></div></li>
-		<li class="collection-item"><div>Enable night mode<a href="#!" class="secondary-content"><div class="switch"><label>Off<input type="checkbox" id="settings-night"><span class="lever"></span>On</label></div></a></div></li>
-	</ul>
-</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© <a class="white-text bold text-lighten-3" href="http://www.worldnine.co">WorldNine</a> <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script>
 
-<a id="add" class="btn-floating btn-large waves-effect waves-light"><i class="mdi-content-add"></i></a>
-<a id="save-trigger" class="btn-floating btn-large waves-effect waves-light"><i class="mdi-content-save"></i></a>
+			</div>
+		</div>
+	</footer>
 
-<div class="preloader-wrapper big active">
-	<div class="spinner-layer spinner-blue">
-	<div class="circle-clipper left">
-	<div class="circle"></div>
-	</div><div class="gap-patch">
-	<div class="circle"></div>
-	</div><div class="circle-clipper right">
-	<div class="circle"></div>
-	</div>
-	</div>
 
-	<div class="spinner-layer spinner-red">
-	<div class="circle-clipper left">
-	<div class="circle"></div>
-	</div><div class="gap-patch">
-	<div class="circle"></div>
-	</div><div class="circle-clipper right">
-	<div class="circle"></div>
-	</div>
-	</div>
+	<!--  Scripts-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
 
-	<div class="spinner-layer spinner-yellow">
-	<div class="circle-clipper left">
-	<div class="circle"></div>
-	</div><div class="gap-patch">
-	<div class="circle"></div>
-	</div><div class="circle-clipper right">
-	<div class="circle"></div>
-	</div>
-	</div>
-
-	<div class="spinner-layer spinner-green">
-	<div class="circle-clipper left">
-	<div class="circle"></div>
-	</div><div class="gap-patch">
-	<div class="circle"></div>
-	</div><div class="circle-clipper right">
-	<div class="circle"></div>
-	</div>
-	</div>
-</div>
-
-<script src="js/init.js"></script>
-
-</body>
+	</body>
 </html>

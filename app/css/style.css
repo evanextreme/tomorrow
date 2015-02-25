@@ -47,6 +47,10 @@ nav {
   background: #3f51b5;
 }
 
+#toast-container {
+	padding: 10px;
+}
+
 nav ul a, nav .brand-logo, .card-title, .button-colapse {
 	color: #000000 !important;
 }
