@@ -195,6 +195,8 @@ $(document).ready(function(){
 				if ($('#new-toggle').is(':checked')) {
 					// Add item to tomorrow list
 					tomorrowlist.unshift(task);
+					// Reset checkbox
+					$("#new-toggle").prop('checked', false);
 				} else {
 					// Add item to today list
 					todaylist.unshift(task);
