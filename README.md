@@ -1,3 +1,2 @@
 # horizon
-This is the public release branch of Tomorrow. Any push to this branch will directly 
-update the tomorrowplanner.com website and web app.
+This is the master and testing branch of tomorrow. After 1.0 this branch will continue to push commits until the next major release
