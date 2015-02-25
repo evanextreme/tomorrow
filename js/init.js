@@ -192,8 +192,13 @@ $(document).ready(function(){
 				toast('Enter a task!', 3000, 'rounded');
 			} else {
 				var task = document.getElementById("task").value;
-				// Add item to today list
-				todaylist.unshift(task);
+				if ($('#new-toggle').is(':checked')) {
+					// Add item to tomorrow list
+					tomorrowlist.unshift(task);
+				} else {
+					// Add item to today list
+					todaylist.unshift(task);
+				}
 				reloadData();
 				document.getElementById("task").value = "";
 				$('#new').closeModal();
