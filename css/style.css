@@ -43,7 +43,7 @@ body {
 
 nav {
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   background: #3f51b5;
 }
 
