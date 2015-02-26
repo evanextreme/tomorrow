@@ -1,0 +1,20 @@
+{
+"manifest_version": 2,
+"name": "Tomorrow",
+"description": "Helping you simplify your life, one day at a time.",
+"version": "1.0",
+"icons": {
+"128": "128.png"
+},
+"app": {
+"urls": [
+"http://www.tomorrowplanner.com/"
+],
+"launch": {
+"web_url": "http://www.tomorrowplanner.com/app/index.html"
+}
+},
+"permissions": [
+"unlimitedStorage"
+]
+}

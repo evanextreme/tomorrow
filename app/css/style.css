@@ -51,6 +51,10 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 	color: #000000 !important;
 }
 
+.topmost {
+	z-index: 999;
+}
+
 .preloader-wrapper {
 	position:absolute;
 	width:300px;
