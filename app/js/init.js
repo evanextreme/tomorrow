@@ -6,7 +6,7 @@ $(document).ready(function(){
 	$('#add').hide();
 	$('#save-trigger').hide();
 
-	if (document.addEventListener) {
+	if (document.addEventListener && window.localStorage) {
     	console.log("Compatible web browser detected.");
 	} else {
 		$('#warning').openModal();
