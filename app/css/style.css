@@ -24,9 +24,9 @@ body {
 	}
 }
 
-@media only screen and (min-width: 1000px) {
-	nav {
-		margin-left: 0 !important;
+@media only screen and (min-width: 993px) {
+	nav .brand-logo {
+		position: static !important;
 	}
 }
 
