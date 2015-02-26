@@ -25,9 +25,9 @@ body {
 }
 
 nav {
-  position: fixed;
-  z-index: 999;
-  background: #3f51b5;
+	position: fixed;
+	z-index: 999;
+	background: #3f51b5;
 }
 
 nav .nav-wrapper {
@@ -89,9 +89,9 @@ nav ul a, nav .brand-logo, .card-title, .button-colapse {
 }
 
 table, tr, th {
-  font-weight: normal !important;
-  margin: 0px !important;
-  padding: 0px !important;
+	font-weight: normal !important;
+	margin: 0px !important;
+	padding: 0px !important;
 }
 
 .task {
@@ -135,11 +135,11 @@ table, tr, th {
 }
 
 #add, #save-trigger {
-  background: #5C6BC0;
-  position: absolute;
-  right: 20px;
-  bottom: 10px;
-  z-index: 2;
+	background: #5C6BC0;
+	position: absolute;
+	right: 20px;
+	bottom: 10px;
+	z-index: 2;
 }
 
 #new {
