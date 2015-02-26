@@ -177,24 +177,43 @@ p {
 
 }
 
-#settings .collection {
-	border: 0 !important;
-	background: transparent !important;
-	max-width: 790px;
-	padding-left: 5px;
-	padding-right: 5px;
+.settings {
 	margin: 56px auto 0px auto;
+	padding: 10px 5px 20px 5px;
+	max-width: 790px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background-clip: padding-box;
+	overflow: hidden;
 }
 
-#settings input {
+.settings .settings-item {
+	line-height: 1.5rem;
+	padding: 10px 20px;
+	margin: 0px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.settings .settings-item:last-child {
+	border-bottom: none;
+}
+
+ .settings a.settings-item {
+	display: block;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-o-transition: 0.25s;
+	-ms-transition: 0.25s;
+	transition: 0.25s;
+	color: #26a69a;
+}
+
+.settings input {
 	height: 21px;
 	line-height: 21px;
 	width: 80%;
 	float: right;
-}
-
-#settings #save-trigger {
-	cursor: pointer;
 }
 
 /* Styles for Setup */
