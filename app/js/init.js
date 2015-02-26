@@ -227,7 +227,7 @@ $(document).ready(function(){
 				$("#save-trigger").css("background", "#424242", 'important');
 				$("#settings").css("background", "#000000", 'important');
 				$(".modal").css("background", "#424242", 'important');
-				$(".collection-item").css("border-bottom", "#151515", 'important');
+				$(".settings-item").css("border-bottom", "#424242", 'important');
 				$("#main").css("background", "#000000", 'important');
 				$(".card").css("background", "#212121", 'important');
 				$(".switch label input[type=checkbox]:first-child:checked+.lever").css("background", "#151515", 'important');
