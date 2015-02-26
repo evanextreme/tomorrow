@@ -5,29 +5,12 @@ body {
 	overflow: none;
 }
 
-@media only screen and (min-width: 1000px) {
-	.brand-logo {
-		margin-left: 10px !important;
-	}
-}
-
 @media only screen and (min-width: 600px) {
 	.card-image .card-title {
 		font-size: 40px;
 	}
-	.brand-logo img {
-		padding: 20px;
-		height: 64px;
-	}
 	#content, #settings .collection {
 		margin: 76px auto 0px auto !important;
-	}
-}
-
-@media only screen and (max-width: 600px) {
-	.brand-logo img {
-		padding: 15px;
-		height: 56px;
 	}
 }
 
@@ -45,6 +28,12 @@ nav {
   position: fixed;
   z-index: 1;
   background: #3f51b5;
+}
+
+.brand-logo img {
+	padding-top: 5px;
+	height: 30px !important;
+	width: auto !important;
 }
 
 #toast-container {
