@@ -6,6 +6,12 @@ $(document).ready(function(){
 	$('#add').hide();
 	$('#save-trigger').hide();
 
+	if (document.addEventListener) {
+    	console.log("Compatible web browser detected.");
+	} else {
+		$('#warning').openModal();
+	}
+
 	// If setup is marked as complete
 	if (localStorage.getItem("setup") === "completed") {
 
