@@ -4,7 +4,7 @@
 "description": "Helping you simplify your life, one day at a time.",
 "version": "1.0",
 "icons": {
-"128": "img/icon-128.png"
+"128": "128.png"
 },
 "app": {
 "urls": [
