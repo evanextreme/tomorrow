@@ -1,7 +1,7 @@
 {
 "manifest_version": 2,
-"name": "Tomorrow",
-"description": "Helping you simplify your life, one day at a time.",
+"name": "tomorrow",
+"description": "Stop worrying.",
 "version": "1.0",
 "icons": {
 "128": "128.png"
