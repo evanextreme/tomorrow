@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6BF1027C-80A7-4BBF-9217-D69DF218E77D</string>
+	<string>28B9450D-7155-42F4-961F-230A78587201</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Hello World</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>3F3EA9DBCC649902540E1BE556CBA74C1CC13970</key>
-		<string>https://github.com/worldninetech/horizon.git</string>
+		<string>https://github.com/worldninetech/tomorrow.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>mobile/platforms/ios/Hello World.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/worldninetech/horizon.git</string>
+	<string>https://github.com/worldninetech/tomorrow.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
