@@ -25,6 +25,9 @@
     </feature>
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarStyle" value="lightcontent" />
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
     <name>Hello World</name>
     <description>
         Hello World sample application that responds to the deviceready event.
@@ -48,7 +51,7 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
-    <preference name="StatusBarOverlaysWebview" value="false" />
+    <preference name="StatusBarOverlaysWebview" value="true" />
     <preference name="StatusBarBackgroundColor" value="#3f51b5" />
     <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
