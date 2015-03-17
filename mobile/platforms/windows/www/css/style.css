@@ -1,0 +1,253 @@
+﻿body {
+	margin: 0;
+	padding: 0;
+	background: #EEEEEE;
+	overflow: none;
+}
+
+@media only screen and (min-width: 600px) {
+	.card-image .card-title {
+		font-size: 40px;
+	}
+	#content, #settings .collection {
+		margin: 76px auto 0px auto !important;
+	}
+}
+
+@media only screen and (min-width: 400px) {
+	.card-image .card-title {
+		font-size: 30px;
+	}
+	.card .delete, .card .link, .card .push {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+}
+
+@media only screen and (min-width: 993px) {
+	nav .brand-logo {
+		position: static !important;
+	}
+}
+
+nav {
+  position: fixed;
+  z-index: 1;
+  background: #3f51b5;
+  text-align: center !important;
+}
+
+.brand-logo img {
+	padding-top: 5px;
+	height: 30px !important;
+	width: auto !important;
+}
+
+#toast-container {
+	padding: 10px;
+}
+
+nav ul a, nav .brand-logo, .card-title, .button-colapse {
+	color: #000000 !important;
+}
+
+.topmost {
+	z-index: 999;
+}
+
+.preloader-wrapper {
+	position:absolute;
+	width:300px;
+	height:200px;
+	z-index:15;
+	top:50%;
+	left:50%;
+	margin:-64px 0 0 -35px;
+	z-index: 0;
+}
+
+#main {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 0;
+	overflow: auto;
+	background: #EEEEEE;
+}
+
+#content {
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 800px;
+	margin: 66px auto 0px auto;
+}
+
+.title {
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #7e7e7e !important
+}
+
+.card-image {
+	max-height: 300px;
+}
+
+.card-image .card-title {
+	color: #FFFFFF !important;
+}
+
+table, tr, th {
+  font-weight: normal !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.task {
+	width: 100%;
+	word-wrap: break-word;
+	margin-bottom: 10px;
+}
+
+#tomorrowlist .card, #tomorrow-weather .card {
+	background: #D3D3D3;
+	color: #7e7e7e;
+}
+
+.actions {
+	height: 36px !important;
+}
+
+.card .delete, .card .link, .card .push {
+	margin-right: 0px !important;
+	margin-bottom: 0px !important;
+	padding-left: 10px;
+	padding-right: 10px;
+	float: right;
+}
+
+.card .push {
+	color: #ffab40;
+}
+
+.card .delete {
+	color: #259b24;
+}
+
+.card .link {
+	color: #3f51b5;
+}
+
+#settings-trigger {
+	background: #3f51b5;
+	width: 100%;
+}
+
+#add, #save-trigger {
+  background: #5C6BC0;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  z-index: 2;
+}
+
+#new {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.modal p {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.modal-footer {
+	background: none !important;
+}
+
+p {
+	margin-bottom: 10px !important;
+}
+
+/* Styles for Settings */
+
+#settings {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 0;
+	overflow: auto;
+	z-index: 1;
+	background: #EEEEEE;
+}
+
+.settings {
+	margin: 56px auto 0px auto;
+	padding: 10px 5px 20px 5px;
+	max-width: 790px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background-clip: padding-box;
+	overflow: hidden;
+}
+
+.settings .settings-item {
+	line-height: 1.5rem;
+	padding: 10px 20px;
+	margin: 0px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.settings .settings-item:last-child {
+	border-bottom: none;
+}
+
+ .settings a.settings-item {
+	display: block;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-o-transition: 0.25s;
+	-ms-transition: 0.25s;
+	transition: 0.25s;
+	color: #26a69a;
+}
+
+.settings input {
+	height: 21px;
+	line-height: 21px;
+	width: 80%;
+	float: right;
+}
+
+/* Styles for Setup */
+
+#setup {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background: #3f51b5;
+	z-index: 1;
+	overflow: auto;
+}
+
+#getstarted {
+	background: #FFFFFF;
+	color: #000000;
+	width: 100%;
+}
+
+#setup nav {
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+#setup #content {
+	max-width: 800px;
+	margin: 66px auto 0px auto;
+}

@@ -1,4 +1,4 @@
-{
+﻿{
 	"name": "Tomorrow",
 	"icons": [
 		{
@@ -38,6 +38,4 @@
 			"density": "4.0"
 		}
 	]
-	"start_url": "app/index.html",
-  "display": "standalone"
 }
