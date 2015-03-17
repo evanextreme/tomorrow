@@ -1,0 +1,17 @@
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\debug\anycpu\resources.pri
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\debug\anycpu\AppxManifest.xml
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\debug\anycpu\CordovaApp.Windows80.build.appxrecipe
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\bld\priconfig.xml
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\bld\priconfig.xml.intermediate
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\bld\layout.resfiles
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\bld\layout.resfiles.intermediate
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\bld\resources.resfiles
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\bld\resources.resfiles.intermediate
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\bld\pri.resfiles
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\bld\pri.resfiles.intermediate
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\bld\qualifiers.txt
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\bld\qualifiers.txt.intermediate
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\bld\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\bld\ProjectArchitectures.txt
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\bld\package.map.txt
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows80\bld\_pkginfo.txt
