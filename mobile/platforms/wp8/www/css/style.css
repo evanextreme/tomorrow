@@ -32,7 +32,6 @@ body {
 
 nav {
   position: fixed;
-	height: 56px;
   z-index: 1;
   background: #3f51b5;
   text-align: center !important;
@@ -40,7 +39,7 @@ nav {
 
 .brand-logo img {
 	padding-top: 5px;
-	height: 25px !important;
+	height: 30px !important;
 	width: auto !important;
 }
 

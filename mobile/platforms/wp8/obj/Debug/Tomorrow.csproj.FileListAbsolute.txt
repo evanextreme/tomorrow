@@ -1,0 +1,14 @@
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\wp8\Bin\Debug\ApplicationIcon.png
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\wp8\Bin\Debug\Background.png
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\wp8\Bin\Debug\co.worldnine.tomorrow.dll
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\wp8\Bin\Debug\co.worldnine.tomorrow.pdb
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\wp8\Bin\Debug\AppManifest.xaml
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\wp8\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\wp8\Bin\Debug\CordovaAppProj_Debug_AnyCPU.xap
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\wp8\obj\Debug\App.g.cs
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\wp8\obj\Debug\cordovalib\CordovaView.g.cs
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\wp8\obj\Debug\MainPage.g.cs
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\wp8\obj\Debug\co.worldnine.tomorrow.g.resources
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\wp8\obj\Debug\co.worldnine.tomorrow.dll
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\wp8\obj\Debug\co.worldnine.tomorrow.pdb
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\wp8\obj\Debug\XapCacheFile.xml
