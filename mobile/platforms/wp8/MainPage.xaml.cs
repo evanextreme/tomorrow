@@ -34,7 +34,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Resources;
 
 
-namespace com.phonegap.helloworld
+namespace co.worldnine.tomorrow
 {
     public partial class MainPage : PhoneApplicationPage
     {

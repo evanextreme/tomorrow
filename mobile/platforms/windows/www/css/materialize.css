@@ -5163,7 +5163,7 @@ nav {
 
 .navbar-fixed {
   position: relative;
-  height: 56px;
+  height: 70px;
   z-index: 998; }
   .navbar-fixed nav {
     position: fixed; }

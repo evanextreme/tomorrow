@@ -18,9 +18,9 @@
        under the License.
 -->
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="b136cb20-cc47-11e4-b2f1-63d2ef88baca" Version="1.0.0.0" Publisher="CN=$username$" />
+  <Identity Name="a2f4d230-cc49-11e4-8ec5-a37a9b020748" Version="1.0.0.0" Publisher="CN=$username$" />
   <Properties>
-    <DisplayName>Hello World</DisplayName>
+    <DisplayName>Tomorrow</DisplayName>
     <PublisherDisplayName>$username$</PublisherDisplayName>
     <Logo>images\StoreLogo.png</Logo>
   </Properties>
@@ -32,8 +32,8 @@
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="com.phonegap.helloworld" StartPage="www/index.html">
-      <m2:VisualElements DisplayName="Hello World" 
+    <Application Id="co.worldnine.tomorrow" StartPage="www/index.html">
+      <m2:VisualElements DisplayName="Tomorrow" 
                          Description="CordovaApp"
                          ForegroundText="light"
                          BackgroundColor="#464646"
