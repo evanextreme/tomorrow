@@ -18,10 +18,10 @@
        under the License.
 -->
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="b136cb20-cc47-11e4-b2f1-63d2ef88baca" Version="1.0.0.0" Publisher="CN=$username$" />
-  <mp:PhoneIdentity PhoneProductId="b136cb20-cc47-11e4-b2f1-63d2ef88baca" PhonePublisherId="db093ed5-53b1-45f7-af72-751e8f36ab80" />
+  <Identity Name="a2f4d230-cc49-11e4-8ec5-a37a9b020748" Version="1.0.0.0" Publisher="CN=$username$" />
+  <mp:PhoneIdentity PhoneProductId="a2f4d230-cc49-11e4-8ec5-a37a9b020748" PhonePublisherId="db093ed5-53b1-45f7-af72-751e8f36ab80" />
   <Properties>
-    <DisplayName>Hello World</DisplayName>
+    <DisplayName>Tomorrow</DisplayName>
     <PublisherDisplayName>$username$</PublisherDisplayName>
     <Logo>images\StoreLogo.png</Logo>
   </Properties>
@@ -33,8 +33,8 @@
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="com.phonegap.helloworld" StartPage="www/index.html">
-      <m3:VisualElements DisplayName="Hello World"
+    <Application Id="co.worldnine.tomorrow" StartPage="www/index.html">
+      <m3:VisualElements DisplayName="Tomorrow"
                          Square150x150Logo="images\Square150x150Logo.png"
                          Square44x44Logo="images\Square44x44Logo.png"
                          Description="CordovaApp"

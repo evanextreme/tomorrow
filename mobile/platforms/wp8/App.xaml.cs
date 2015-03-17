@@ -32,7 +32,7 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
-namespace com.phonegap.helloworld
+namespace co.worldnine.tomorrow
 {
     public partial class App : Application
     {
