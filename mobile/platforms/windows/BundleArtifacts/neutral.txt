@@ -1,0 +1,2 @@
+MainPackage=C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\phone\debug\anycpu\CordovaApp.Phone_0.0.1.0_anycpu_debug.appx
+ResourcePack=C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\phone\debug\anycpu\CordovaApp.Phone_0.0.1.0_scale-100.appx
