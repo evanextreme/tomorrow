@@ -83,7 +83,7 @@ $(document).ready(function(){
 						// Detect links in task
 						var result;
 						while((result = url.exec(todaylist[i])) !== null) {
-							$( ".actions" + i ).append('<a href="#" onclick="window.open(' + result[1] + ', '_system')" class="waves-effect waves-green btn-flat link">Open Link</a>');
+							$( ".actions" + i ).append('<a href="' + result[1] + '" class="waves-effect waves-green btn-flat link">Open Link</a>');
 						}
 					}
 				}
