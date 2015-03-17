@@ -3,18 +3,12 @@
     "installs_allowed_from": [
         "*"
     ],
-    "version": "1.0.0",
+    "version": "0.0.1",
     "name": "Tomorrow",
-    "description": "Hello World sample application that responds to the deviceready event.",
+    "description": "A sample Apache Cordova application that responds to the deviceready event.",
     "developer": {
-        "name": "PhoneGap Team",
-        "url": "http://phonegap.com"
+        "name": "Apache Cordova Team",
+        "url": "http://cordova.io"
     },
-    "fullscreen": "true",
-    "icons": {
-        "57": "/icon/icon-57.png",
-        "72": "/icon/icon-72.png",
-        "114": "/icon/icon-114.png",
-        "144": "/icon/icon-144.png"
-    }
+    "icons": {}
 }
