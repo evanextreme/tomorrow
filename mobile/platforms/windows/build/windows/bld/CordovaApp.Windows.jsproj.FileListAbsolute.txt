@@ -1,0 +1,15 @@
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\Debug\AnyCPU\ReverseMap\resources.pri
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\Debug\AnyCPU\AppxManifest.xml
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\Debug\AnyCPU\CordovaApp.Windows.build.appxrecipe
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\bld\priconfig.xml
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\bld\priconfig.xml.intermediate
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\bld\layout.resfiles
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\bld\layout.resfiles.intermediate
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\bld\resources.resfiles
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\bld\resources.resfiles.intermediate
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\bld\pri.resfiles
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\bld\pri.resfiles.intermediate
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\bld\qualifiers.txt
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\bld\qualifiers.txt.intermediate
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\bld\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\bld\ProjectArchitectures.txt
