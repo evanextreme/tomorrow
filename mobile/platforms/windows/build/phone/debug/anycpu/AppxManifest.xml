@@ -8,7 +8,7 @@
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
   <Identity Name="co.worldnine.tomorrow" Publisher="CN=$username$" Version="0.0.1.0" ProcessorArchitecture="neutral" />
-  <mp:PhoneIdentity PhoneProductId="a2f4d230-cc49-11e4-8ec5-a37a9b020748" PhonePublisherId="db093ed5-53b1-45f7-af72-751e8f36ab80" />
+  <mp:PhoneIdentity PhoneProductId="bcf73330-cc4e-11e4-8f13-27b29389424a" PhonePublisherId="db093ed5-53b1-45f7-af72-751e8f36ab80" />
   <Properties>
     <DisplayName>Tomorrow</DisplayName>
     <PublisherDisplayName>Apache Cordova Team</PublisherDisplayName>
@@ -23,7 +23,7 @@
   </Resources>
   <Applications>
     <Application Id="co.worldnine.tomorrow" StartPage="www/index.html">
-      <m3:VisualElements BackgroundColor="transparent" Description="CordovaApp" DisplayName="Tomorrow" ForegroundText="light" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+      <m3:VisualElements BackgroundColor="#3F51B5" Description="CordovaApp" DisplayName="Tomorrow" ForegroundText="light" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
         <m3:DefaultTile Square71x71Logo="images\Square71x71Logo.png" Wide310x150Logo="images\Wide310x150Logo.png">
           <m3:ShowNameOnTiles>
             <m3:ShowOn Tile="square150x150Logo" />
@@ -31,6 +31,11 @@
           </m3:ShowNameOnTiles>
         </m3:DefaultTile>
         <m3:SplashScreen Image="images\SplashScreenPhone.png" />
+        <m3:InitialRotationPreference>
+          <m3:Rotation Preference="portrait" />
+          <m3:Rotation Preference="landscape" />
+          <m3:Rotation Preference="landscapeFlipped" />
+        </m3:InitialRotationPreference>
       </m3:VisualElements>
     </Application>
   </Applications>
@@ -44,6 +49,7 @@
     <build:Item Name="SharedGUID" Value="9ebdb27f-d75b-4d8c-b53f-7be4a1fe89f9" />
     <build:Item Name="CodeSharingProject" Value="248F659F-DAC5-46E8-AC09-60EC9FC95053" />
     <build:Item Name="VisualStudio" Version="14.0" />
+    <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Ultimate 2015 Preview" />
     <build:Item Name="OperatingSystem" Version="6.3.9600.16384 (winblue_rtm.130821-1623)" />
     <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.22310.1" />
     <build:Item Name="ProjectGUID" Value="31b67a35-9503-4213-857e-f44eb42ae549" />

@@ -3,243 +3,294 @@
   <PropertyGroup>
     <Machine>EHIRSHDESKTOP</Machine>
     <WindowsUser>Evan</WindowsUser>
-    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <PackageIdentityName>bcf73330-cc4e-11e4-8f13-27b29389424a</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\phone\bld\</IntermediateOutputPath>
+    <PackageIdentityName>co.worldnine.tomorrow</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\bld\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>CA4287997026BE312138ADF5B5C290245E4877ECF768A49FCDF216E996B3FAE7</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>co.worldnine.tomorrow_0.0.1.0_neutral__54dbk1tt7zbhy</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>co.worldnine.tomorrow_54dbk1tt7zbhy!co.worldnine.tomorrow</RegisteredUserModeAppID>
+    <RegisteredPackageID>co.worldnine.tomorrow</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Apache Cordova Temp Cert</RegisteredPackagePublisher>
+    <RegisteredVersion>0.0.1.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\phone\Debug\AnyCPU\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\Debug\AnyCPU\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-03-19T03:25:58.496</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\images\SplashScreen.scale-100.png">
       <PackagePath>images\SplashScreen.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\images\SplashScreenPhone.scale-240.png">
-      <PackagePath>images\SplashScreenPhone.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-03-19T03:25:20.503</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\images\Square150x150Logo.scale-100.png">
       <PackagePath>images\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\images\Square150x150Logo.scale-240.png">
-      <PackagePath>images\Square150x150Logo.scale-240.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-03-19T03:24:02.846</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\images\Square30x30Logo.scale-100.png">
       <PackagePath>images\Square30x30Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-03-19T03:25:04.599</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\images\Square310x310Logo.scale-100.png">
       <PackagePath>images\Square310x310Logo.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\images\Square44x44Logo.scale-240.png">
-      <PackagePath>images\Square44x44Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-03-19T03:23:36.320</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\images\Square70x70Logo.scale-100.png">
       <PackagePath>images\Square70x70Logo.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\images\Square71x71Logo.scale-240.png">
-      <PackagePath>images\Square71x71Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-03-19T03:24:34.690</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\images\StoreLogo.scale-100.png">
       <PackagePath>images\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\images\StoreLogo.scale-240.png">
-      <PackagePath>images\StoreLogo.scale-240.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-03-19T03:22:57.124</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\images\Wide310x150Logo.scale-100.png">
       <PackagePath>images\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\images\Wide310x150Logo.scale-240.png">
-      <PackagePath>images\Wide310x150Logo.scale-240.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-03-19T03:23:06.571</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\android-chrome-144x144.png">
       <PackagePath>www\img\android-chrome-144x144.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.867</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\android-chrome-192x192.png">
       <PackagePath>www\img\android-chrome-192x192.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.869</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\android-chrome-36x36.png">
       <PackagePath>www\img\android-chrome-36x36.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.870</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\android-chrome-48x48.png">
       <PackagePath>www\img\android-chrome-48x48.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.871</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\android-chrome-72x72.png">
       <PackagePath>www\img\android-chrome-72x72.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.872</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\android-chrome-96x96.png">
       <PackagePath>www\img\android-chrome-96x96.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.873</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\apple-touch-icon-114x114.png">
       <PackagePath>www\img\apple-touch-icon-114x114.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.874</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\apple-touch-icon-120x120.png">
       <PackagePath>www\img\apple-touch-icon-120x120.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.875</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\apple-touch-icon-144x144.png">
       <PackagePath>www\img\apple-touch-icon-144x144.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.877</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\apple-touch-icon-152x152.png">
       <PackagePath>www\img\apple-touch-icon-152x152.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.878</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\apple-touch-icon-180x180.png">
       <PackagePath>www\img\apple-touch-icon-180x180.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.879</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\apple-touch-icon-57x57.png">
       <PackagePath>www\img\apple-touch-icon-57x57.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.881</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\apple-touch-icon-60x60.png">
       <PackagePath>www\img\apple-touch-icon-60x60.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.882</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\apple-touch-icon-72x72.png">
       <PackagePath>www\img\apple-touch-icon-72x72.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.883</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\apple-touch-icon-76x76.png">
       <PackagePath>www\img\apple-touch-icon-76x76.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.884</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\apple-touch-icon-precomposed.png">
       <PackagePath>www\img\apple-touch-icon-precomposed.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.886</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\apple-touch-icon.png">
       <PackagePath>www\img\apple-touch-icon.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.887</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\favicon-16x16.png">
       <PackagePath>www\img\favicon-16x16.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.890</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\favicon-32x32.png">
       <PackagePath>www\img\favicon-32x32.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.891</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\favicon-96x96.png">
       <PackagePath>www\img\favicon-96x96.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.893</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\logo.png">
       <PackagePath>www\img\logo.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.895</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\logowhite.png">
       <PackagePath>www\img\logowhite.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.896</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\mstile-144x144.png">
       <PackagePath>www\img\mstile-144x144.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.898</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\mstile-150x150.png">
       <PackagePath>www\img\mstile-150x150.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.899</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\mstile-310x150.png">
       <PackagePath>www\img\mstile-310x150.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.900</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\mstile-310x310.png">
       <PackagePath>www\img\mstile-310x310.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.901</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\mstile-70x70.png">
       <PackagePath>www\img\mstile-70x70.png</PackagePath>
+      <Modified>2015-03-19T03:25:28.903</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\browserconfig.xml">
       <PackagePath>www\browserconfig.xml</PackagePath>
+      <Modified>2015-03-19T03:25:28.833</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\config.xml">
       <PackagePath>config.xml</PackagePath>
+      <Modified>2015-03-19T03:25:28.930</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\cordova.js">
       <PackagePath>www\cordova.js</PackagePath>
+      <Modified>2015-03-19T03:25:28.921</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\cordova_plugins.js">
       <PackagePath>www\cordova_plugins.js</PackagePath>
+      <Modified>2015-03-19T03:25:28.943</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\jquery-2.1.3.min.js">
       <PackagePath>www\jquery-2.1.3.min.js</PackagePath>
+      <Modified>2015-03-19T03:25:28.950</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\js\init.js">
       <PackagePath>www\js\init.js</PackagePath>
+      <Modified>2015-03-19T03:25:28.951</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\js\materialize.js">
       <PackagePath>www\js\materialize.js</PackagePath>
+      <Modified>2015-03-19T03:25:28.963</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\js\materialize.min.js">
       <PackagePath>www\js\materialize.min.js</PackagePath>
+      <Modified>2015-03-19T03:25:28.965</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\js\weather.js">
       <PackagePath>www\js\weather.js</PackagePath>
+      <Modified>2015-03-19T03:25:28.965</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\css\materialize.css">
       <PackagePath>www\css\materialize.css</PackagePath>
+      <Modified>2015-03-19T03:25:28.945</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\css\materialize.min.css">
       <PackagePath>www\css\materialize.min.css</PackagePath>
+      <Modified>2015-03-19T03:25:28.946</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\css\style.css">
       <PackagePath>www\css\style.css</PackagePath>
+      <Modified>2015-03-19T03:25:28.947</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\font\material-design-icons\LICENSE.txt">
       <PackagePath>www\font\material-design-icons\LICENSE.txt</PackagePath>
+      <Modified>2015-03-19T03:25:28.853</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\font\material-design-icons\Material-Design-Icons.eot">
       <PackagePath>www\font\material-design-icons\Material-Design-Icons.eot</PackagePath>
+      <Modified>2015-03-19T03:25:28.854</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\font\material-design-icons\Material-Design-Icons.svg">
       <PackagePath>www\font\material-design-icons\Material-Design-Icons.svg</PackagePath>
+      <Modified>2015-03-19T03:25:28.856</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\font\material-design-icons\Material-Design-Icons.ttf">
       <PackagePath>www\font\material-design-icons\Material-Design-Icons.ttf</PackagePath>
+      <Modified>2015-03-19T03:25:28.857</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\font\roboto\Roboto-Bold.ttf">
       <PackagePath>www\font\roboto\Roboto-Bold.ttf</PackagePath>
+      <Modified>2015-03-19T03:25:28.860</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\font\roboto\Roboto-Light.ttf">
       <PackagePath>www\font\roboto\Roboto-Light.ttf</PackagePath>
+      <Modified>2015-03-19T03:25:28.861</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\font\roboto\Roboto-Medium.ttf">
       <PackagePath>www\font\roboto\Roboto-Medium.ttf</PackagePath>
+      <Modified>2015-03-19T03:25:28.863</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\font\roboto\Roboto-Regular.ttf">
       <PackagePath>www\font\roboto\Roboto-Regular.ttf</PackagePath>
+      <Modified>2015-03-19T03:25:28.864</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\font\roboto\Roboto-Thin.ttf">
       <PackagePath>www\font\roboto\Roboto-Thin.ttf</PackagePath>
+      <Modified>2015-03-19T03:25:28.866</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\font\material-design-icons\Material-Design-Icons.woff">
       <PackagePath>www\font\material-design-icons\Material-Design-Icons.woff</PackagePath>
+      <Modified>2015-03-19T03:25:28.858</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\bg.jpg">
       <PackagePath>www\img\bg.jpg</PackagePath>
+      <Modified>2015-03-19T03:25:28.889</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\img\favicon.ico">
       <PackagePath>www\img\favicon.ico</PackagePath>
+      <Modified>2015-03-19T03:25:28.894</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\index.html">
       <PackagePath>www\index.html</PackagePath>
+      <Modified>2015-03-19T03:25:28.948</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\LICENSE">
       <PackagePath>www\LICENSE</PackagePath>
+      <Modified>2015-03-19T03:25:28.915</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\manifest.json">
       <PackagePath>www\manifest.json</PackagePath>
+      <Modified>2015-03-19T03:25:28.966</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\www\README.md">
       <PackagePath>www\README.md</PackagePath>
+      <Modified>2015-03-19T03:25:28.919</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\phone\Debug\AnyCPU\ReverseMap\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Evan\Desktop\tomorrow\mobile\platforms\windows\build\windows\Debug\AnyCPU\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-03-19T03:25:58.453</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.Phone.WinJS.2.1\1.0\">
-      <Name>Microsoft.Phone.WinJS.2.1</Name>
-      <Version>1.0.9651.0</Version>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\">
+      <Name>Microsoft.WinJS.2.0</Name>
+      <Version>1.0.9600.17018</Version>
       <Architecture>Neutral</Architecture>
-      <FrameworkIdentity>Name=Microsoft.Phone.WinJS.2.1, MinVersion=1.0.9651.0</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.Phone.WinJS.2.1\1.0\Microsoft.Phone.WinJS.2.1.appx</AppxLocation>
+      <FrameworkIdentity>Name=Microsoft.WinJS.2.0, MinVersion=1.0.9600.17018</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\Microsoft.WinJS.2.0.appx</AppxLocation>
       <MoreInfo>http://go.microsoft.com/fwlink/%3fLinkId=260891</MoreInfo>
     </ResolvedSDKReference>
   </ItemGroup>
