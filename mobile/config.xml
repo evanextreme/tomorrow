@@ -1,11 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="co.worldnine.tomorrow" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <preference name="StatusBarOverlaysWebView" value="false" />
+  <preference name="StatusBarBackgroundColor" value="#3F51B5" />
+  <preference name="StatusBarStyle" value="darkcontent" />
     <name>Tomorrow</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Stop worrying and start living your life a day at a time.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="dev@worldnine.co" href="http://worldnine.co">
+        WorldNine
     </author>
     <content src="index.html" />
     <access origin="*" />

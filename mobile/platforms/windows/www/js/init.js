@@ -5,6 +5,7 @@
 	$('#settings').hide();
 	$('#add').hide();
 	$('#save-trigger').hide();
+	xmlDoc=loadXMLDoc("config.xml");
 
 	if (document.addEventListener && window.localStorage) {
     	console.log("Compatible web browser detected.");
@@ -82,7 +83,7 @@
 						// Detect links in task
 						var result;
 						while((result = url.exec(todaylist[i])) !== null) {
-							$( ".actions" + i ).append('<a href="' + result[1] + '" target="_blank" class="waves-effect waves-green btn-flat link">Open Link</a>');
+							$( ".actions" + i ).append('<a href="#" onclick="window.open(' + result[1] + ', '_system')" class="waves-effect waves-green btn-flat link">Open Link</a>');
 						}
 					}
 				}
@@ -234,6 +235,9 @@
 				$("body").css("color", "#FFFFFF", 'important');
 				$("a").css("color", "#FFFFFF", 'important');
 				$("input").css("color", "#FFFFFF", 'important');
+
+				<preference name="StatusBarBackgroundColor" value="#000000" />
+
 			}
 
 			// Show everything
@@ -275,5 +279,16 @@
 		localStorage["setup"] = "";
 		location.reload();
 	}
+	function readConfig() {
+    var xhr = new XMLHttpRequest();
+    xhr.addEventListener("load", function () {
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(xhr.responseText, "application/xml");
+        alert("Description : " +
+              doc.getElementsByTagName("description").item(0).textContent);
+    });
+    xhr.open("get", "../config.xml", true);
+    xhr.send();
+}
 
 });
