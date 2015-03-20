@@ -35,6 +35,7 @@
 }
 
 - (id)initWithDelegate:(NSObject <UIWebViewDelegate>*)delegate;
+- (BOOL)request:(NSURLRequest*)newRequest isFragmentIdentifierToRequest:(NSURLRequest*)originalRequest CDV_DEPRECATED(3.5, "Use request:isEqualToRequestAfterStrippingFragments: instead.");
 
 - (BOOL)request:(NSURLRequest*)newRequest isEqualToRequestAfterStrippingFragments:(NSURLRequest*)originalRequest;
 
