@@ -18,11 +18,27 @@ $(document).ready(function(){
 
 	// Test for browser features
 
+	function isIE () {
+		var myNav = navigator.userAgent.toLowerCase();
+		return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+	}
+
+	// This shit isn't working
+	/*
 	if (document.addEventListener && window.localStorage) {
-    	console.log("Compatible web browser detected.");
+		if (isIE()) {
+			if (isIE() >= 10) {
+				console.log("Compatible web browser detected.");
+			} else {
+				$('#warning').openModal();
+			}
+		} else {
+			console.log("Compatible web browser detected.");
+		}
 	} else {
 		$('#warning').openModal();
 	}
+	*/
 
 	// If setup is marked as complete
 	if (localStorage.getItem("setup") === "completed") {
