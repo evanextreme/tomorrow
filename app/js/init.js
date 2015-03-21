@@ -27,6 +27,15 @@ $(document).ready(function(){
 	// If setup is marked as complete
 	if (localStorage.getItem("setup") === "completed") {
 
+		// Initialize Parse
+
+		Parse.initialize("ElqbC55axUkd4ggu1iZ93zpMOl3ugywzGrfjLJO0", "6Nh8jWxuToiwgSTFe9xzS9CE9KVdupmQ942zPeLq");
+		var TestObject = Parse.Object.extend("TestObject");
+		var testObject = new TestObject();
+		testObject.save({foo: "bar"}).then(function(object) {
+			toast('Parse API working!', 3000, 'rounded');
+		});
+
 		// Load todaylist from localStorage
 
 		var todaylist = JSON.parse("[" + localStorage["todaylist"] + "]");
