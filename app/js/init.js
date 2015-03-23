@@ -40,17 +40,13 @@ $(document).ready(function(){
 	}
 	*/
 
-	// If setup is marked as complete
-	if (localStorage.getItem("setup") === "completed") {
+	// Initialize Parse and attempt login
 
-		// Initialize Parse
+	Parse.initialize("ElqbC55axUkd4ggu1iZ93zpMOl3ugywzGrfjLJO0", "6Nh8jWxuToiwgSTFe9xzS9CE9KVdupmQ942zPeLq");
 
-		Parse.initialize("ElqbC55axUkd4ggu1iZ93zpMOl3ugywzGrfjLJO0", "6Nh8jWxuToiwgSTFe9xzS9CE9KVdupmQ942zPeLq");
-		var TestObject = Parse.Object.extend("TestObject");
-		var testObject = new TestObject();
-		testObject.save({foo: "bar"}).then(function(object) {
-			toast('Parse API working!', 3000, 'rounded');
-		});
+	var currentUser = Parse.User.current();
+
+	if (currentUser) {
 
 		// Load todaylist from localStorage
 
@@ -280,7 +276,31 @@ $(document).ready(function(){
 
 		});
 
-	// If setup is not marked as complete
+	} else {
+
+		$("#setup").html('<nav class="navbar"><div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo"><img src="img/logowhite.png"></a></div></nav><div id="content"><div class="card"><div class="card-content"><span class="card-title">Login to Tomorrow</span><div class="row"><div class="input-field col s12"><input id="login-username" type="text" class="validate"><label for="login-username">Email</label></div></div><div class="input-field col s12"><input id="login-password" type="password" class="validate"><label for="login-password">Password</label></div></div></div><div class="row"><a class="btn-large waves-effect waves-dark col s12 login">Login</a><a class="btn-large waves-effect waves-dark col s12 signup">Sign up</a></div></div>');
+		$('#setup').show();
+
+		$(document).on('click', ".login", function() {
+			if( ($("#login-username").val() == 0) || ($("#login-password").val() == 0) ) {
+				// Tell user to fill out everything
+				toast('Fill out everything and try again!', 3000, 'rounded');
+			} else {
+				Parse.User.logIn($("#login-username").val(), $("#login-password").val(), {
+				success: function(user) {
+					toast('Login worked!', 3000, 'rounded');
+				},
+				error: function(user, error) {
+					toast('Login failed!', 3000, 'rounded');
+				}
+				});
+			}
+		});
+	}
+
+	// If setup is marked as complete
+
+	/*
 	} else if (localStorage.getItem("setup") != "completed") {
 
 		// Show setup because it's not complete
@@ -312,5 +332,5 @@ $(document).ready(function(){
 		localStorage["setup"] = "";
 		location.reload();
 	}
-
+	*/
 });
