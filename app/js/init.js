@@ -48,8 +48,6 @@ $(document).ready(function(){
 
 	if (currentUser) {
 
-		// Load todaylist from localStorage
-
 		var todaylist = JSON.parse("[" + localStorage["todaylist"] + "]");
 		var tomorrowlist = JSON.parse("[" + localStorage["tomorrowlist"] + "]");
 
@@ -319,6 +317,7 @@ $(document).ready(function(){
 							},
 							error: function(user, error) {
 								toast("Error: " + error.code + " " + error.message, 3000, 'rounded');
+								console.log("ERROR: " + error.code + " " + error.message);
 							}
 						});
 					} else {
