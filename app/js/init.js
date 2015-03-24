@@ -283,7 +283,6 @@ $(document).ready(function(){
 
 		$(document).on('click', ".login", function() {
 			if( ($("#login-username").val() == 0) || ($("#login-password").val() == 0) ) {
-				// Tell user to fill out everything
 				toast('Fill out everything and try again!', 3000, 'rounded');
 			} else {
 				Parse.User.logIn($("#login-username").val(), $("#login-password").val(), {
@@ -296,6 +295,40 @@ $(document).ready(function(){
 				});
 			}
 		});
+
+		$(document).on('click', ".signup", function() {
+			$("#setup").html('<nav class="navbar"><div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo"><img src="img/logowhite.png"></a></div></nav><div id="content"><div class="card"><div class="card-content"><span class="card-title">Sign up for Tomorrow</span><p>Tomorrow uses an account system to keep your data synced between all your devices.</p><div class="row"><div class="input-field col s12"><input id="signup-username" type="text" class="validate"><label for="signup-username">Email</label></div></div><div class="input-field col s12"><input id="signup-password1" type="password" class="validate"><label for="signup-password1">Password</label></div><div class="input-field col s12"><input id="signup-password2" type="password" class="validate"><label for="signup-password2">Confirm Password</label></div><p>Tomorrow also uses your location to provide weather information. This can be a United States ZIP code, City/Country format, or a set of coordinates.</p><div class="input-field col s12"><input id="signup-location" type="text" class="validate"><label for="signup-location">Location</label></div></div></div><div class="row"><a class="btn-large waves-effect waves-dark col s12 signup-confirm">Sign up</a></div></div>');
+
+			$(document).on('click', ".signup-confirm", function() {
+
+				if( ($("#signup-username").val() == 0) || ($("#signup-password1").val() == 0) || ($("#signup-password2").val() == 0) || ($("#signup-location").val() == 0) ) {
+					toast('Fill out everything and try again!', 3000, 'rounded');
+				} else {
+					if ($("#signup-password1").val() == $("#signup-password2").val()) {
+						var user = new Parse.User();
+						user.set("username", $("#signup-username").val());
+						user.set("password", $("#signup-password1").val());
+						user.signUp(null, {
+							success: function(user) {
+								user.set("todaylist", '"This is a sample list item. You can delete these easily by tapping the Dismiss button.","Look what happens when you add a link! http://www.google.com/"');
+								user.set("tomorrowlist", "");
+								user.set("location", $("#signup-location").val());
+								user.set("weather", "true");
+								user.set("night", "false");
+								location.reload();
+							},
+							error: function(user, error) {
+								toast("Error: " + error.code + " " + error.message, 3000, 'rounded');
+							}
+						});
+					} else {
+						toast("Passwords don't match!", 3000, 'rounded');
+					}
+				}
+
+			});
+		});
+
 	}
 
 	// If setup is marked as complete
