@@ -48,7 +48,7 @@ $(document).ready(function(){
 				$("#tomorrow-weather").append("<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.forecast[1].thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's going to be " + weather.forecast[1].low + "&deg;" + weather.units.temp + "/" + weather.forecast[1].high + "&deg;" + weather.units.temp + " and " + weather.forecast[1].text +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>");
 			},
 			error: function(error) {
-				toast('Error fetching the weather.', 3000, 'rounded');
+				Materialize.toast('Error fetching the weather.', 3000, 'rounded');
 			}
 			});
 
@@ -135,7 +135,7 @@ $(document).ready(function(){
 			if( ($("#settings-firstname").val() == 0) || ($("#settings-lastname").val() == 0) || ($("#settings-zip").val() == 0) )
 			{
 				// Tell user to fill out everything
-				toast('Fill out everything before saving!', 3000, 'rounded');
+				Materialize.toast('Fill out everything before saving!', 3000, 'rounded');
 			} else {
 				localStorage['firstname'] = $("#settings-firstname").val();
 				localStorage['lastname'] = $("#settings-lastname").val();
@@ -162,7 +162,7 @@ $(document).ready(function(){
 			todaylist.splice(item,1);
 			$( "#" + item ).fadeOut( 500, function() {
 				reloadData();
-				toast('Task completed.', 3000, 'rounded');
+				Materialize.toast('Task completed.', 3000, 'rounded');
 			});
 		});
 
@@ -171,14 +171,12 @@ $(document).ready(function(){
 		$(document).on('click', ".push", function() {
 			var item = $(this).parent().parent().parent().attr('id');
 			var task = $( ".task" + item ).text();
-			console.log("item: " + item);
-			console.log("task: " + task);
 			todaylist.splice(item,1); // Remove item from today list
 			tomorrowlist.unshift(task); // Add item to tomorrow list
 			$( "#" + item ).fadeOut( 500, function() {
 				$('#confirm').closeModal();
 				reloadData();
-				toast('Task pushed to tomorrow.', 3000, 'rounded');
+				Materialize.toast('Task pushed to tomorrow.', 3000, 'rounded');
 			});
 		});
 
@@ -195,7 +193,7 @@ $(document).ready(function(){
 		 var keycode = (event.keyCode ? event.keyCode : event.which);
 		 if(keycode == '13'){
 		 	if(document.getElementById("task").value == 0) {
-				toast('Enter a task!', 3000, 'rounded');
+				Materialize.toast('Enter a task!', 3000, 'rounded');
 			} else {
 				var task = document.getElementById("task").value;
 				if ($('#new-toggle').is(':checked')) {
@@ -210,7 +208,7 @@ $(document).ready(function(){
 				reloadData();
 				document.getElementById("task").value = "";
 				$('#new').closeModal();
-				toast('Task added.', 3000, 'rounded');
+				Materialize.toast('Task added.', 3000, 'rounded');
 			}
 		 }
 		});
@@ -255,7 +253,7 @@ $(document).ready(function(){
 			if( ($("#setup-firstname").val() == 0) || ($("#setup-lastname").val() == 0) || ($("#setup-zip").val() == 0) )
 			{
 				// Tell user to fill out everything
-				toast('Fill out everything and try again!', 3000, 'rounded');
+				Materialize.toast('Fill out everything and try again!', 3000, 'rounded');
 			} else {
 				// Save contents of text fields to localStorage
 				localStorage['firstname'] = $("#setup-firstname").val();
