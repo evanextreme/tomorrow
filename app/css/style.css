@@ -236,11 +236,6 @@ p {
 	overflow: auto;
 }
 
-#setup .login, #setup .signup, #setup .signup-confirm {
-	background: #FFFFFF;
-	color: #000000;
-}
-
 #getstarted {
 	background: #FFFFFF;
 	color: #000000;

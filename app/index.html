@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 	<meta name="mobile-web-app-capable" content="yes">
 	<title>Tomorrow</title>
-	<script src="http://www.parsecdn.com/js/parse-1.3.5.min.js"></script>
 	<script src="jquery-2.1.3.min.js"></script>
 	<script src="js/materialize.min.js"></script>
 	<script src="js/weather.js"></script>
@@ -30,6 +29,16 @@
 	<meta name="msapplication-TileImage" content="mstile-144x144.png">
 	<meta name="msapplication-config" content="browserconfig.xml">
 	<meta name="theme-color" content="#3f51b5">
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60030229-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body>
 
@@ -70,7 +79,46 @@
 
 </div>
 
-<div id="setup"></div>
+<div id="setup">
+
+	<nav class="navbar">
+		<div class="nav-wrapper">
+			<a id="logo-container" href="#" class="brand-logo"><img src="img/logowhite.png"></a>
+		</div>
+	</nav>
+
+	<div id="content">
+		<div class="card">
+			<div class="card-content">
+				<span class="card-title">Welcome</span>
+				<p>Tomorrow is an intelligent daily planner, designed to be simple and elegant.</p>
+				<p>Instead of thinking about your life far in the future, take a few steps back, and think about only the day ahead of you.</p>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-content">
+				<span class="card-title">Let us get to know you</span>
+				<p>Give Tomorrow some basic info so we can personalize your experience.</p>
+				<div class="row">
+					<div class="input-field col s6">
+						<input id="setup-firstname" type="text" class="validate">
+						<label for="setup-firstname">First Name</label>
+					</div>
+					<div class="input-field col s6">
+						<input id="setup-lastname" type="text" class="validate">
+						<label for="setup-lastname">Last Name</label>
+					</div>
+					<div class="input-field col s12">
+						<input id="setup-zip" type="text" class="validate">
+						<label for="setup-zip">City or ZIP Code</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="#" id="getstarted" class="btn-large waves-effect waves-dark">Get Started</a>
+	</div>
+
+</div>
 
 <div id="settings">
 	<nav class="navbar">
