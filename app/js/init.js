@@ -44,7 +44,7 @@ $(document).ready(function(){
 			woeid: '',
 			unit: 'f',
 			success: function(weather) {
-				$("#today-weather").append("<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's currently " + weather.temp + "&deg;" + weather.units.temp + " and " + weather.currently +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>");
+				$("#today-weather").append("<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's currently " + weather.temp + "&deg;" + weather.units.temp + " and " + weather.currently +  " in " + weather.city + ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>");
 				$("#tomorrow-weather").append("<div class='card'><div class='card-content'><table><tr><th style='width: 80px;'><img src='" + weather.forecast[1].thumbnail + "' style='width: 80px; height: auto;' /></th><th><p>It's going to be " + weather.forecast[1].low + "&deg;" + weather.units.temp + "/" + weather.forecast[1].high + "&deg;" + weather.units.temp + " and " + weather.forecast[1].text +  ".</p><p style='font-style: italic; font-size: 12px;'>Weather provided by Yahoo Weather.</p></th></tr></table></div></div>");
 			},
 			error: function(error) {
